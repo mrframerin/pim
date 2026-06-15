@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/fix-next-server-chunks.mjs",
+    "postbuild": "node scripts/fix-next-server-chunks.mjs && node scripts/copy-mirror-static.mjs",
     "start": "next start"
   },
   "dependencies": {
