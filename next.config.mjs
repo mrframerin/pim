@@ -10,6 +10,14 @@ const nextConfig = {
     return {
       fallback: [
         {
+          source: "/front-static/:path*",
+          destination: "/notion-mirror/front-static/:path*"
+        },
+        {
+          source: "/remote/:path*",
+          destination: "/notion-mirror/remote/:path*"
+        },
+        {
           source: "/_next/static/:path*",
           destination: "/notion-mirror/_next/static/:path*"
         }

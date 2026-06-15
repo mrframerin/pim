@@ -14,6 +14,12 @@
     /(^|\.)segment\.io$/,
     /(^|\.)segment\.com$/,
     /(^|\.)amplitude\.com$/,
+    /(^|\.)amplitude\.com\.cdn\.cloudflare\.net$/,
+    /(^|\.)statsigapi\.net$/,
+    /(^|\.)statsig\.com$/,
+    /(^|\.)accounts\.google\.com$/,
+    /(^|\.)transcend-cdn\.com$/,
+    /(^|\.)transcend\.io$/,
     /(^|\.)splunk\.com$/,
     /(^|\.)splunkcloud\.com$/,
     /(^|\.)google-analytics\.com$/,
@@ -49,11 +55,40 @@
     if (typeof value !== "string") return value;
     try {
       var url = new URL(value, window.location.href);
+      if (url.origin === window.location.origin && url.pathname === "/_next/image") {
+        var imageUrl = url.searchParams.get("url");
+        if (imageUrl && imageUrl.indexOf("/front-static/") === 0) {
+          return "/notion-mirror" + imageUrl;
+        }
+      }
       if (url.origin === window.location.origin && url.pathname.startsWith("/_next/static/")) {
         return "/notion-mirror" + url.pathname + url.search + url.hash;
       }
+      if (url.origin === window.location.origin && url.pathname.startsWith("/front-static/")) {
+        return "/notion-mirror" + url.pathname + url.search + url.hash;
+      }
     } catch (_) {}
-    return value.replace(/^\/_next\/static\//, "/notion-mirror/_next/static/");
+    return value
+      .replace(/^\/_next\/static\//, "/notion-mirror/_next/static/")
+      .replace(/^\/front-static\//, "/notion-mirror/front-static/");
+  }
+
+  function safeScriptUrl(value) {
+    if (isBlocked(value)) return "data:text/javascript,";
+    return localizeAssetUrl(value);
+  }
+
+  function localizeSrcset(value) {
+    if (typeof value !== "string") return value;
+    return value
+      .split(",")
+      .map(function (candidate) {
+        var parts = candidate.trim().split(/\s+/);
+        if (!parts[0]) return candidate;
+        parts[0] = localizeAssetUrl(parts[0]);
+        return parts.join(" ");
+      })
+      .join(", ");
   }
 
   function neutralizeAuthLinks(root) {
@@ -111,17 +146,27 @@
     };
   }
 
-  ["src", "href"].forEach(function (attribute) {
-    var descriptor = Object.getOwnPropertyDescriptor(
-      attribute === "src" ? HTMLScriptElement.prototype : HTMLLinkElement.prototype,
-      attribute
-    );
+  [
+    [typeof HTMLScriptElement !== "undefined" && HTMLScriptElement.prototype, "src"],
+    [typeof HTMLLinkElement !== "undefined" && HTMLLinkElement.prototype, "href"],
+    [typeof HTMLImageElement !== "undefined" && HTMLImageElement.prototype, "src"],
+    [typeof HTMLImageElement !== "undefined" && HTMLImageElement.prototype, "srcset"],
+    [typeof HTMLSourceElement !== "undefined" && HTMLSourceElement.prototype, "src"],
+    [typeof HTMLSourceElement !== "undefined" && HTMLSourceElement.prototype, "srcset"]
+  ].forEach(function (entry) {
+    var prototype = entry[0];
+    var attribute = entry[1];
+    if (!prototype) return;
+
+    var descriptor = Object.getOwnPropertyDescriptor(prototype, attribute);
 
     if (!descriptor || !descriptor.set) return;
 
-    Object.defineProperty(attribute === "src" ? HTMLScriptElement.prototype : HTMLLinkElement.prototype, attribute, {
+    Object.defineProperty(prototype, attribute, {
       get: descriptor.get,
       set: function (value) {
+        if (attribute === "srcset") return descriptor.set.call(this, localizeSrcset(value));
+        if (this.tagName === "SCRIPT" && attribute === "src") return descriptor.set.call(this, safeScriptUrl(value));
         return descriptor.set.call(this, localizeAssetUrl(value));
       }
     });
@@ -130,11 +175,15 @@
   var originalSetAttribute = Element.prototype.setAttribute;
   Element.prototype.setAttribute = function (name, value) {
     var lowerName = String(name).toLowerCase();
-    if (
+    if (lowerName === "srcset") {
+      value = localizeSrcset(value);
+    } else if (
       (this.tagName === "SCRIPT" && lowerName === "src") ||
-      (this.tagName === "LINK" && lowerName === "href")
+      (this.tagName === "LINK" && lowerName === "href") ||
+      (this.tagName === "IMG" && lowerName === "src") ||
+      (this.tagName === "SOURCE" && lowerName === "src")
     ) {
-      value = localizeAssetUrl(value);
+      value = this.tagName === "SCRIPT" ? safeScriptUrl(value) : localizeAssetUrl(value);
     }
     return originalSetAttribute.call(this, name, value);
   };
