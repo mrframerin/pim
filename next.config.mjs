@@ -5,7 +5,17 @@ const root = dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  outputFileTracingRoot: root
+  outputFileTracingRoot: root,
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: "/_next/static/:path*",
+          destination: "/notion-mirror/_next/static/:path*"
+        }
+      ]
+    };
+  }
 };
 
 export default nextConfig;
