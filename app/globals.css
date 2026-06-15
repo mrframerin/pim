@@ -1,0 +1,19 @@
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background: #fff;
+}
+
+body {
+  overflow: hidden;
+}
+
+.notionMirror {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  background: #fff;
+}

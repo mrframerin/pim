@@ -1,0 +1,20 @@
+{
+  "name": "shopos-pim",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "node scripts/fix-next-server-chunks.mjs",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.28.0",
+    "eslint-config-next": "^15.3.3"
+  }
+}
