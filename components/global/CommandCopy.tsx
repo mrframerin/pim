@@ -15,8 +15,10 @@ type Props = {
 /**
  * A read-only command field with a copy button. Clicking copies the command to
  * the clipboard and briefly shows "Copied!" in THIS field only (scoped per
- * instance). Adds the overflow-fade modifier when the command is wider than the
- * field, matching the original behaviour.
+ * instance). The command stays as the input's value the whole time — the
+ * "Copied!" text is painted by an overlay so the field keeps its width instead
+ * of shrinking to fit the shorter word. Adds the overflow-fade modifier when the
+ * command is wider than the field, matching the original behaviour.
  */
 export default function CommandCopy({ command, analyticsName, analyticsContext }: Props) {
   const [copied, setCopied] = useState(false);
@@ -54,8 +56,29 @@ export default function CommandCopy({ command, analyticsName, analyticsContext }
           spellCheck={false}
           autoComplete="off"
           className="command-cta-command"
-          value={copied ? "Copied!" : command}
+          value={command}
+          style={copied ? { color: "transparent" } : undefined}
         />
+        {copied && (
+          <span
+            aria-hidden="true"
+            className="command-cta-copied-overlay"
+            style={{
+              position: "absolute",
+              insetBlock: 0,
+              insetInlineStart: 0,
+              display: "flex",
+              alignItems: "center",
+              font: "var(--typography-global-code-font-computed, var(--typography-global-code-font))",
+              letterSpacing:
+                "var(--typography-global-code-letter-spacing-computed, var(--typography-global-code-letter-spacing))",
+              color: "var(--color-text-normal)",
+              pointerEvents: "none"
+            }}
+          >
+            Copied!
+          </span>
+        )}
       </div>
       <button
         title={copied ? "Copied!" : "Copy to clipboard"}
