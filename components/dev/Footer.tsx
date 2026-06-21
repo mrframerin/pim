@@ -176,7 +176,7 @@ export default function Footer() {
             <div className="flex flex-row items-center justify-start flex-nowrap inline-auto max-inline-full gap-0">
               <div className="pt-8 pb-8 ps-16 pe-48 surface surfaceAccent surface_surfaceAccent___PDKt commandCTA_commandContainer__AZ6SG">
                 <div className="commandCTA_commandMask__GCTUb">
-                  <input type="text" readOnly="" aria-label="Install command" spellCheck="false" autoComplete="off" className="commandCTA_command__sAhle" value="curl -fsSL https://ntn.dev | bash" />
+                  <input type="text" readOnly aria-label="Install command" spellCheck="false" autoComplete="off" className="commandCTA_command__sAhle" value="curl -fsSL https://ntn.dev | bash" />
                 </div>
                 <button title="Copy to clipboard" type="button" aria-label="Copy to clipboard" className="iconButton_iconButton__wbWve iconButton_backgroundSizeFill__CK2pT commandCTA_copyButton__mgYzA" data-analytics-name="dev_platform_cli_copy_button" data-analytics-context="endcap">
                   <span aria-hidden="true" className="iconButton_icon__sgIFz">

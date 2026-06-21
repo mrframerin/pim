@@ -96,6 +96,26 @@ export default function FooterGame() {
 
     let cancelled = false;
     let pollTimer = 0;
+    let wheelDoc: Document | null = null;
+
+    // The iframe is full-page height with its own scrolling disabled, so wheel
+    // events over the game would otherwise be swallowed (nothing to scroll) and
+    // the user couldn't scroll the page past the footer. Same-origin lets us
+    // forward those wheel deltas to the parent window's scroll. Clicks still
+    // reach the game (we don't touch them).
+    const LINE_HEIGHT = 16;
+    const forwardWheel = (e: WheelEvent) => {
+      const factor = e.deltaMode === 1 ? LINE_HEIGHT : e.deltaMode === 2 ? window.innerHeight : 1;
+      // `behavior: "instant"` so wheel stays native-feeling — the page sets
+      // scroll-behavior: smooth, which would otherwise animate each wheel tick.
+      window.scrollBy({ top: e.deltaY * factor, left: e.deltaX * factor, behavior: "instant" });
+    };
+    const bindWheel = () => {
+      const doc = iframe.contentDocument;
+      if (!doc || wheelDoc === doc) return;
+      wheelDoc = doc;
+      doc.addEventListener("wheel", forwardWheel, { passive: true });
+    };
 
     const position = (): boolean => {
       const win = iframe.contentWindow;
@@ -130,9 +150,11 @@ export default function FooterGame() {
     };
 
     const onLoad = () => {
+      bindWheel();
       let tries = 0;
       const tick = () => {
         if (cancelled) return;
+        bindWheel();
         const ok = position();
         // The game renders lazily after `_app` hydrates and the section is in
         // view; keep re-positioning until the shell exists and is sized.
@@ -155,6 +177,7 @@ export default function FooterGame() {
       window.clearTimeout(pollTimer);
       iframe.removeEventListener("load", onLoad);
       window.removeEventListener("resize", onResize);
+      wheelDoc?.removeEventListener("wheel", forwardWheel);
     };
   }, [mounted]);
 

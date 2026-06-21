@@ -120,7 +120,11 @@ providers) and why A2 works (reuses `_app`'s providers wholesale).
   `<iframe src="/notion-mirror/dev.html">`, sizes it to full page height (so the inner
   game IO fires), matches its render width to our host, and `translate()`s it up so the
   inner `.dev_footerGameSection` aligns to a `overflow:hidden` crop window → only the
-  real game shows, fully interactive. Mount trigger = IntersectionObserver (real users)
+  real game shows, fully interactive. The full-height iframe can't scroll, so it would
+  swallow wheel events — a same-origin `wheel` listener forwards deltas to the parent
+  via `scrollBy({behavior:"instant"})` (the page sets scroll-behavior:smooth, which
+  would otherwise animate each tick); clicks pass through untouched. Mount trigger =
+  IntersectionObserver (real users)
   **+ scroll/slow-poll proximity fallback** (IO delivery is suppressed when the page is
   backgrounded; timers still fire). Wired into `Footer.tsx` (replaced the placeholder);
   `DevPlatformAnimations.hydrateFooterGame` (old canvas approx) **deleted**.

@@ -18,7 +18,7 @@ export default function ToolsSection() {
             <div className="responsiveAccordionCarousel_inner___MXac" style={{ "--responsive-accordion-carousel-grid-columns": "minmax(0, 1fr) minmax(0, 1fr)" } as CSSProperties}>
               <div className="responsiveAccordionCarousel_info__ffjxn">
                 <div role="tablist" className="responsiveAccordionCarousel_tablist___ydaL accordionCarouselTabs_accordion__svIk0 dev_toolsAccordionTabs__tcIxP accordionCarouselTabs_accordionFillRemainingHeight__HG4qM">
-                  <div role="tab" tabIndex="0" aria-selected="true" className="responsiveAccordionCarousel_tab__05YAX accordionCarouselTabs_accordionTrigger___9KT5">
+                  <div role="tab" tabIndex={0} aria-selected="true" className="responsiveAccordionCarousel_tab__05YAX accordionCarouselTabs_accordionTrigger___9KT5">
                     <span className="accordionCarouselTabs_accordionTitleRow__hj9n3">
                       <div className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantCardTitleSummary__lvrMk accordionCarouselTabs_accordionTitle__p8uMW">Generate assets from your docs</div>
                     </span>
@@ -46,7 +46,7 @@ export default function ToolsSection() {
                       </div>
                     </div>
                   </div>
-                  <div role="tab" tabIndex="-1" aria-selected="false" className="responsiveAccordionCarousel_tab__05YAX accordionCarouselTabs_accordionTrigger___9KT5">
+                  <div role="tab" tabIndex={-1} aria-selected="false" className="responsiveAccordionCarousel_tab__05YAX accordionCarouselTabs_accordionTrigger___9KT5">
                     <span className="accordionCarouselTabs_accordionTitleRow__hj9n3">
                       <div className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantCardTitleSummary__lvrMk accordionCarouselTabs_accordionTitle__p8uMW">Query any data warehouse</div>
                     </span>
@@ -74,7 +74,7 @@ export default function ToolsSection() {
                       </div>
                     </div>
                   </div>
-                  <div role="tab" tabIndex="-1" aria-selected="false" className="responsiveAccordionCarousel_tab__05YAX accordionCarouselTabs_accordionTrigger___9KT5">
+                  <div role="tab" tabIndex={-1} aria-selected="false" className="responsiveAccordionCarousel_tab__05YAX accordionCarouselTabs_accordionTrigger___9KT5">
                     <span className="accordionCarouselTabs_accordionTitleRow__hj9n3">
                       <div className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantCardTitleSummary__lvrMk accordionCarouselTabs_accordionTitle__p8uMW">Take actions in any app</div>
                     </span>
