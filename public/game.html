@@ -8,8 +8,12 @@
 <link rel="stylesheet" href="/notion-mirror/_next/static/css/ec32f51b3360f9b3.css" />
 <link rel="stylesheet" href="/notion-mirror/_next/static/css/b7d43c5e3eac98e1.css" />
 <style>
-  html, body { margin: 0; height: 100%; width: 100%; overflow: hidden; background: transparent; }
-  #game-root, #game-root > * { width: 100%; height: 100%; }
+  /* Let the game shell use its own aspect-ratio (900/320 desktop, 450/320 under
+     799px) — don't force height, or it overrides the ratio. The shell is
+     inline-size:100% via the page's CSS, so it fills the iframe width and
+     derives its height. */
+  html, body { margin: 0; overflow: hidden; background: transparent; }
+  #game-root { width: 100%; }
 </style>
 </head>
 <body>
@@ -42,8 +46,24 @@
       var React = req(667294);
       var ReactDOMClient = req(620745);     // exports createRoot
       var game = req(64204);                 // { AgentRunGameClient }
-      ReactDOMClient.createRoot(document.getElementById("game-root"))
-        .render(React.createElement(game.AgentRunGameClient));
+      // The game calls useIntl(), so it must render inside react-intl's
+      // <IntlProvider> (otherwise: "Could not find required intl object").
+      // react-intl lives in module 688624; find the provider by displayName so
+      // we don't depend on the minified export letter. Empty messages + an
+      // onError no-op keep it quiet (the game's visible text is canvas-drawn).
+      var intlMod = req(688624);
+      var IntlProvider = null;
+      for (var k in intlMod) {
+        if (intlMod[k] && intlMod[k].displayName === "IntlProvider") { IntlProvider = intlMod[k]; break; }
+      }
+      if (!IntlProvider) throw new Error("IntlProvider not found in module 688624");
+      ReactDOMClient.createRoot(document.getElementById("game-root")).render(
+        React.createElement(
+          IntlProvider,
+          { locale: "en", defaultLocale: "en", messages: {}, onError: function () {} },
+          React.createElement(game.AgentRunGameClient)
+        )
+      );
     } catch (e) {
       console.error("[game boot]", e);
       document.getElementById("game-root").setAttribute("data-game-error", String(e));

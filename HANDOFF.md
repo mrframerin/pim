@@ -101,56 +101,52 @@ compare against **dev.html**.
 - Fidelity fixes: `@property --direction` in `public/custom.css`; 2 dynamic CSS
   chunks linked in `app/layout.tsx`.
 
-### footer agent-run game (#8) — A2 DONE ✓ ; A1 = next
-User chose "reuse Notion's original game JS". **A2 is implemented & verified 1:1.**
+### footer agent-run game (#8) — A1 DONE ✓ (active); A2 superseded
+User chose "reuse Notion's original game JS". **A1 is implemented & verified 1:1 and is
+now the ACTIVE approach in `FooterGame.tsx`.** A2 was built first, worked, then replaced
+by the slimmer A1 (both are real-game-1:1; A1 is far lighter). A2 is recoverable in git.
 
-**Why the mirror runs the game (the key insight):** `dev.html` is NOT a static
-snapshot — it boots the *entire* original Notion Pages-Router app. `static-frontend
--guard.js` rewrites every `/_next/static/` + `/front-static/` URL to `/notion-mirror/*`
-(so even lazy chunks load locally) and stubs analytics/auth network calls to `{}`.
-The full bundle hydrates (`webpack`→`framework`→`main`→**`_app`**→`pages/product/dev`);
-**`_app` mounts ALL the providers** (`IntlProvider`, theme, Statsig flags). The footer
-game is SSR'd as just `<div class="agentRunGame_placeholder">LOADING…</div>`; on scroll
-the page lazy-imports chunk **64204** (`AgentRunGameClient`) into
-`.dev_footerGameSection__QFwm_` inside that provider tree → no IntlProvider error.
-**This is exactly why the standalone `game.html` fails** (bare module, no `_app`
-providers) and why A2 works (reuses `_app`'s providers wholesale).
+**Why the mirror runs the game (the key insight):** `dev.html` is NOT a static snapshot
+— it boots the *entire* original Notion Pages-Router app (`webpack`→`framework`→`main`→
+**`_app`**→`pages/product/dev`), and **`_app` mounts ALL the providers** (`IntlProvider`,
+theme, Statsig flags). The footer game is SSR'd as `<div class="agentRunGame_placeholder">
+LOADING…</div>`; on scroll the page lazy-imports chunk **64204** (`AgentRunGameClient`)
+into `.dev_footerGameSection__QFwm_` inside that provider tree. A naive standalone mount
+of just module 64204 throws `[React Intl] Could not find required intl object` because it
+has no provider tree. webpack publicPath is baked to `/notion-mirror/_next/`, so all
+assets/lazy chunks resolve against the mirror from anywhere.
 
-- **A2 (DONE):** `components/dev/FooterGame.tsx` (client) — lazy-mounts a same-origin
-  `<iframe src="/notion-mirror/dev.html">`, sizes it to full page height (so the inner
-  game IO fires), matches its render width to our host, and `translate()`s it up so the
-  inner `.dev_footerGameSection` aligns to a `overflow:hidden` crop window → only the
-  real game shows, fully interactive. The full-height iframe can't scroll, so it would
-  swallow wheel events — a same-origin `wheel` listener forwards deltas to the parent
-  via `scrollBy({behavior:"instant"})` (the page sets scroll-behavior:smooth, which
-  would otherwise animate each tick); clicks pass through untouched. Mount trigger =
-  IntersectionObserver (real users)
-  **+ scroll/slow-poll proximity fallback** (IO delivery is suppressed when the page is
-  backgrounded; timers still fire). Wired into `Footer.tsx` (replaced the placeholder);
-  `DevPlatformAnimations.hydrateFooterGame` (old canvas approx) **deleted**.
-  - **Crop target = the inner `.dev_footerGameSection` (514px), NOT the shell (450px)**
-    — the section's 32px top/bottom padding comes from a CSS chunk we don't link, so
-    cropping to the section reproduces it 1:1 (our outer host has 0 padding).
-  - **VERIFIED (DOM measurement @1280px):** host 1265×514, real `agentRunGame_shell`+
-    `agentRunGame_canvas` 1265×450, placeholder gone, full-bleed (left 0), "Click to
-    play" button present, no horizontal overflow from the embed. Matches the mirror's
-    section numbers exactly. Console shows only the iframe's stubbed-analytics noise
-    (Statsig/Amplitude/CSP) — harmless, identical to the mirror offline.
-  - **Headless verify caveat:** the preview backgrounds the page (`document.hidden`),
-    pausing rAF/IO and timing out screenshots — so animated pixels + click SFX can't be
-    captured here, but were proven to render on `dev.html` directly (canvas 1265×450).
-- **A1 (NEXT, user wants it tried):** lighter alternative — extend `public/game.html`
-  to render `AgentRunGameClient` wrapped in the REAL `<IntlProvider locale="en"
-  defaultLocale="en" messages={…} onError={()=>{}}>` (+ theme/flag providers as needed)
-  pulled from the bundle. Game = module **64204** (`64204.bad928abc388b73a.js`, exports
-  `AgentRunGameClient`; deps 785893/667294/688624+406518/447358; react-dom createRoot =
-  **620745**). `game.html` already captures `__webpack_require__` via the chunk-push
-  trick `self.webpackChunk_N_E.push([["x"],{},function(req){window.__wreq=req}])` and
-  resolves all modules; **blocker was** `[React Intl] Could not find required intl
-  object`. Find the provider at runtime by scanning
-  `__wreq.m[id].toString().includes("IntlProvider")`. If A1 works it replaces A2's heavy
-  full-bundle iframe with a slim game-only iframe; if it spirals into rebuilding the
-  whole `_app` provider tree, A2 already ships the real game.
+- **A1 (DONE, ACTIVE):** `public/game.html` boots ONLY the game's chunks (polyfills,
+  webpack runtime, framework, `_app`, dev-page, 64204 — NOT `main`, so the page bootstrap
+  + analytics never auto-run), captures `__webpack_require__` via the chunk-push trick
+  `self.webpackChunk_N_E.push([["x"],{},(req)=>window.__wreq=req])`, then renders
+  `AgentRunGameClient` wrapped in the **real `<IntlProvider locale="en" defaultLocale="en"
+  messages={{}} onError={()=>{}}>`**. The provider is react-intl module **688624**, found
+  at runtime by scanning its exports for `displayName === "IntlProvider"` (currently
+  export `Pj`, but found by displayName so the minified letter can change). `useIntl` =
+  same module's `YB`/`nr`. That single provider is enough — no theme/flag providers needed.
+  - **game.html sizing:** `#game-root{width:100%}` only — do NOT force height, or it
+    overrides the shell's `aspect-ratio`. `.agentRunGame_shell` is `inline-size:100%`,
+    `aspect-ratio:900/320` (desktop ≥800px → 1265-wide ⇒ 450 tall) / `450/320` under
+    `@media(max-width:799px)`. Styles live in `b7d43c5e3eac98e1.css` (linked in game.html).
+  - **`FooterGame.tsx`** (client) now lazy-mounts `<iframe src="/game.html">` (IO + scroll/
+    poll proximity fallback for backgrounded pages), measures the inner shell height and
+    sets the iframe height to it, and wraps it with `padding:32px 0` to reproduce the
+    original section spacing → host **1265×514**, game **1265×450** (= original). A
+    same-origin `wheel` listener forwards deltas to the parent via
+    `scrollBy({behavior:"instant"})` so the page scrolls over the game; clicks untouched.
+  - **VERIFIED (DOM @1280px):** standalone `/game.html` → shell 1280×455 (aspect 2.813 =
+    900/320), `gameError`=null; in footer → host 1265×514, shell 1265×450, canvas
+    1898×675 (×1.5 dpr), wheel-forward ±OK. No NEW console errors (the 6 intl errors seen
+    are STALE from the pre-fix v1 load — count never grew on reload). `npm run build` green.
+  - **Headless caveat:** preview backgrounds the page (`document.hidden`) → rAF paused, so
+    animated canvas pixels + click SFX can't be captured here (screenshots time out). SFX
+    is `new Audio(B).play().catch(()=>{})` — non-fatal if it ever fails.
+- **A2 (superseded, in git history):** `FooterGame.tsx` previously embedded
+  `/notion-mirror/dev.html` (the whole page) and cropped to the game section via a
+  full-height iframe + `translate()` + `overflow:hidden`. Worked & verified 1:1 but heavy
+  (loads the entire page + analytics inside the iframe). Replaced by A1. Recover from the
+  commit before A1 if the slim path ever regresses.
 
 ### PENDING
 - **Tools carousel slides 2 & 3** (data-warehouse + web-browser chats) and the
