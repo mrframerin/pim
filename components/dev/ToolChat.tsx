@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 
 /*
- * Faithful reproduction of the agent tool-chat that Notion's JS renders into the
- * tools demo (NDSChatPreviewContent). DOM + class names captured verbatim from
- * the live render, styled by the chat CSS chunk linked in layout.tsx (741ca564).
+ * The agent tool-chat in the tools demo (NDSChatPreviewContent). Uses the
+ * design-system class names, styled by the chat CSS chunk linked in layout.tsx
+ * (741ca564).
  * Items reveal in document order on scroll-in (fadeIn -> fadeInVisible, and the
  * reply rows fadeUp -> fadeUpVisible); the thought header reads "Thinking" until
  * the steps finish, then "Thought".
@@ -73,7 +73,7 @@ const Connector = () => (
   </div>
 );
 
-/** Reveal offsets (ms from scroll-in) for the 10 staged items, captured pacing. */
+/** Reveal offsets (ms from scroll-in) for the 10 staged items. */
 const OFFSETS = [200, 700, 1200, 1500, 2000, 2300, 2800, 3500, 3900, 4300];
 
 export default function ToolChat() {

@@ -1,8 +1,8 @@
 import type { CSSProperties } from "react";
 import ToolChat from "@/components/dev/ToolChat";
 
-/** #tools — Build any tool for your agents. (main > [1] > [1.1.1]). Static DOM ported 1:1.
- *  The first carousel slide's chat is the real NDSChatPreviewContent (ToolChat). */
+/** Tools section (#tools) — "Build any tool for your agents."
+ *  The first carousel slide's chat is the NDSChatPreviewContent (ToolChat). */
 export default function ToolsSection() {
   return (
     <section className="section_section__ppkch section_collapsible__OYoF5" id="tools" data-analytics-scroll-point="true" data-analytics-name="DevPlatformTools">

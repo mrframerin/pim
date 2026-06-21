@@ -3,17 +3,16 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Build with the Developer Platform",
-  description: "Exact 1:1 recreation rebuilt as a Next.js component tree."
+  description: "Build tools, agents, and integrations on the developer platform."
 };
 
 /*
- * The page's original compiled stylesheets, loaded verbatim so the recreated
- * DOM matches 1:1 (resets, @layer order, fonts, keyframes all preserved).
- * url() references inside them resolve under /vendor/ which is served
- * from public/. Rebrand later by overriding the CSS custom properties
- * (design tokens) in app/tokens.css — see that file.
+ * Compiled design-system stylesheets (served from public/vendor): resets,
+ * @layer cascade order, fonts, and keyframes the components rely on. url()
+ * references inside them resolve under /vendor/. Rebrand by overriding the CSS
+ * custom properties (design tokens) in app/tokens.css.
  *
- * Order matters (cascade); this is the exact order dev.html links them.
+ * Order matters for the cascade — keep this order.
  */
 const PAGE_STYLES = [
   "ac65860a9aeeaaf7",
@@ -27,9 +26,9 @@ const PAGE_STYLES = [
   "e5043d4403a0fb6e",
   "25a0c6d2da3f048d",
   "a0a0ab254c58ee78",
-  // Code-split component stylesheets the original loads on demand (NDS design
-  // system): database preview (8ad8ed8f) + chat preview (741ca564). Needed for
-  // the sync database and tool-chat to render 1:1.
+  // Code-split component stylesheets (NDS design system): database preview
+  // (8ad8ed8f) + chat preview (741ca564) — needed for the sync database and
+  // tool-chat.
   "8ad8ed8f553031b2",
   "741ca564029b831d"
 ];

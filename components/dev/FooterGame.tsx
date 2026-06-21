@@ -3,22 +3,21 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Footer agent-run game — approach **A1** ("slim game-only iframe").
+ * Footer agent-run game — a slim game-only iframe.
  *
- * Instead of embedding the whole mirror page and cropping to the game (A2), we
- * embed `public/game.html`, which boots ONLY what the game needs: the webpack
+ * Embeds `public/game.html`, which boots ONLY what the game needs: the webpack
  * runtime + framework + `_app` (for its modules) + the dev-page chunk + the game
  * chunk (64204, `AgentRunGameClient`). The game calls `useIntl()`, so `game.html`
- * renders it inside react-intl's real `<IntlProvider>` (pulled from the bundle by
+ * renders it inside react-intl's `<IntlProvider>` (pulled from the bundle by
  * displayName) — resolving the `[React Intl] Could not find required intl object`
- * error that blocked a naive standalone mount. webpack's publicPath is baked to
- * `/vendor/_next/`, so all assets/lazy chunks resolve against the mirror.
+ * error that blocks a bare standalone mount. webpack's publicPath is
+ * `/vendor/_next/`, so its assets/lazy chunks resolve from public/vendor.
  *
- * The game shell is `inline-size:100%` with `aspect-ratio:900/320` (desktop, the
- * footer look) — so at our full-bleed host width it renders ~1265×450, matching
- * the original. The iframe is just the game (no cropping), with 32px top/bottom
- * padding on the wrapper to reproduce the original `.dev_footerGameSection`
- * spacing (that padding lives in a CSS chunk we don't link in our app).
+ * The game shell is `inline-size:100%` with `aspect-ratio:900/320` (the desktop
+ * footer look) — so at our full-bleed host width it renders ~1265×450. The iframe
+ * is just the game (no cropping), with 32px top/bottom padding on the wrapper to
+ * reproduce the `.dev_footerGameSection` spacing (that padding lives in a CSS
+ * chunk we don't link in our app).
  */
 
 const GAME_SRC = "/game.html";

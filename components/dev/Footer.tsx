@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import FooterGame from "@/components/dev/FooterGame";
 
-/** Footer (footerMinimal). Static shell ported 1:1; the agent-run game inside dev_footerGameSection runs the real Notion game via a cropped iframe of the mirror (FooterGame, approach A2). */
+/** Footer (minimal variant). The agent-run game inside dev_footerGameSection is rendered by FooterGame. */
 export default function Footer() {
   return (
     <footer data-analytics-scroll-point="true" data-analytics-name="footer" className="surface surfaceBase surface_surfaceBase__UD3lo footerMinimal_footerOuter__B6EDD footerMinimal_hideSeparator__6BmCW">

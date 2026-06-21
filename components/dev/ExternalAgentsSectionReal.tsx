@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { CSSProperties } from "react";
 
-/** Bring your favorite agents into Notion. (main > [2]). Static section ported 1:1. */
+/** External agents section — "Bring your favorite agents into Notion." */
 export default function ExternalAgentsSectionReal() {
   return (
     <section className="section_section__ppkch section_collapsible__OYoF5" id="externalAgents" data-analytics-scroll-point="true" data-analytics-name="DevPlatformExternalAgents">

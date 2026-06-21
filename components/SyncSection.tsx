@@ -16,9 +16,8 @@ const SOURCE_TABS = [
 const PLATE_PATH =
   "M54.0234 1.5V3.02344H62.4043V6.07129H67.7383V9.11914H70.7861V12.167H73.833V15.2139H76.8809V18.2617H79.9287V23.5957H82.9766V31.9766H84.5V54.0234H82.9766V62.4043H79.9287V67.7383H76.8809V70.7861H73.833V73.833H70.7861V76.8809H67.7383V79.9287H62.4043V82.9766H54.0234V84.5H31.9766V82.9766H23.5957V79.9287H18.2617V76.8809H15.2139V73.833H12.167V70.7861H9.11914V67.7383H6.07129V62.4043H3.02344V54.0234H1.5V31.9766H3.02344V23.5957H6.07129V18.2617H9.11914V15.2139H12.167V12.167H15.2139V9.11914H18.2617V6.07129H23.5957V3.02344H31.9766V1.5H54.0234Z";
 
-/* The pre-highlighted TypeScript snippet, verbatim from the original (Prism
- * token markup). Embedded as HTML so it stays byte-exact rather than being
- * hand-retranscribed token by token. */
+/* The pre-highlighted TypeScript snippet (Prism token markup). Embedded as HTML
+ * so the syntax highlighting stays exact rather than hand-retranscribed. */
 const CODE_HTML = `<span class="token keyword">import</span> <span class="token punctuation">{</span> Worker <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@notionhq/workers"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> worker <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Worker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -53,8 +52,8 @@ worker<span class="token punctuation">.</span><span class="token function">sync<
 export default function SyncSection() {
   const [active, setActive] = useState(0);
 
-  // Sync-demo timeline, captured from the live original (offsets in ms from when
-  // the demo scrolls into view): terminal text + phase + staggered DB row reveal.
+  // Sync-demo timeline (offsets in ms from when the demo scrolls into view):
+  // terminal text + phase + staggered DB row reveal.
   const demoRef = useRef<HTMLDivElement>(null);
   const [phase, setPhase] = useState<"intro" | "syncing" | "done">("intro");
   const [terminal, setTerminal] = useState("Connecting. Found 5 new tickets...");

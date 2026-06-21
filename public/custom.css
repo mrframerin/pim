@@ -1,15 +1,13 @@
 /*
- * Styles for hand-rebuilt widgets that Notion renders via JS and are therefore
- * NOT in the scraped HTML/CSS (so they must be reconstructed). First up: the
- * Support Tickets database in the sync demo. Tuned to the reference screenshots.
+ * Styles for the JS-rendered widgets (the Support Tickets database in the sync
+ * demo), which the design-system CSS chunks don't cover. Tuned to the reference.
  */
 
 /*
- * Notion registers --direction at runtime via CSS.registerProperty (a typed,
- * inherited <number>, initial 1 for LTR). That JS doesn't run in this static
- * rebuild, so every `transform/translate: …var(--direction)…` (connector icons,
- * arrows, captions) would resolve to an invalid value and be dropped. Replicate
- * the registration so they resolve exactly as on the original LTR page.
+ * --direction is a typed, inherited <number> custom property (initial 1 for LTR)
+ * that some browsers only honor once registered. Without the registration, every
+ * `transform/translate: …var(--direction)…` (connector icons, arrows, captions)
+ * would resolve to an invalid value and be dropped — so register it here.
  */
 @property --direction {
   syntax: "<number>";

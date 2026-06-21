@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-/** #platform — CLI, API, MCP, SDK — LFG. (main > [3]). Static 4-card grid ported 1:1; copy-button micro-interactions are a later enhancement. */
+/** Platform section (#platform) — CLI, API, MCP, SDK. 4-card grid; copy-button micro-interactions are a later enhancement. */
 export default function PlatformSectionReal() {
   return (
     <section className="section_section__ppkch section_collapsible__OYoF5" id="platform" data-analytics-scroll-point="true" data-analytics-name="DevPlatformPlatform">

@@ -19,13 +19,12 @@
 <body>
 <div id="game-root"></div>
 <!--
-  Isolated boot of Notion's real footer game (AgentRunGameClient, webpack module
-  64204) — the user asked to reuse the original game JS verbatim. We load the
-  original runtime + framework + _app + dev-page + game chunks, grab
-  __webpack_require__ via the chunk-push executor trick, and render the component
-  ourselves. `main` is intentionally NOT loaded so the Next page bootstrap (and
-  its analytics) never auto-runs. This page is embedded via an <iframe> in the
-  footer so its second React/webpack instance stays isolated from the app.
+  Isolated boot of the agent-run game widget (AgentRunGameClient, module 64204).
+  Loads the design-system runtime + framework + _app + dev-page + game chunks,
+  grabs __webpack_require__ via the chunk-push executor trick, and renders the
+  component. `main` is intentionally NOT loaded so the page bootstrap (and its
+  analytics) never auto-runs. Embedded via an <iframe> in the footer so its
+  second React/webpack instance stays isolated from the app.
 -->
 <script src="/vendor/_next/static/chunks/polyfills-42372ed130431b0a.js"></script>
 <script>self.webpackChunk_N_E = self.webpackChunk_N_E || [];</script>

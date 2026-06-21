@@ -3,9 +3,9 @@
 import { useEffect } from "react";
 
 function cycleTerminalLines() {
-  // NOTE: the sync-demo terminal + database are now driven faithfully by
-  // SyncSection/SyncDatabase (real captured timeline). Only the tools demo
-  // terminal remains here until ToolsSection gets the same treatment.
+  // NOTE: the sync-demo terminal + database are driven by SyncSection/
+  // SyncDatabase. Only the tools-demo terminal remains here until ToolsSection
+  // gets the same treatment.
   const sequences = [
     {
       selector: ".toolDemo_terminalLine__PpS8W",
@@ -42,10 +42,9 @@ function cycleTerminalLines() {
   return () => timers.forEach((timer) => window.clearInterval(timer));
 }
 
-// NOTE: the footer agent-run game is now the REAL Notion game, mounted via a
-// cropped same-origin iframe of the mirror — see components/dev/FooterGame.tsx
-// (approach A2). The previous hand-built canvas approximation (hydrateFooterGame)
-// has been removed; recover it from git history if ever needed.
+// NOTE: the footer agent-run game is rendered by components/dev/FooterGame.tsx.
+// The previous hand-built canvas approximation (hydrateFooterGame) has been
+// removed; recover it from git history if ever needed.
 
 export default function DevPlatformAnimations() {
   useEffect(() => {

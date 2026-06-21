@@ -1,12 +1,11 @@
 import type { CSSProperties } from "react";
 
 /*
- * Faithful reproduction of the "Support Tickets" database that Notion's JS
- * renders into the sync demo (NDSDatabasePreviewContent). DOM + class names are
- * captured verbatim from the live render, so the CSS already linked in layout.tsx
- * styles it 1:1 — no custom CSS needed. Colors are the original LTR/light values
- * (rebrand later via tokens). `revealed` controls the staggered row fade-in
- * (rowFadeIn -> rowVisible); items are the 5 rows then the footer (index 5).
+ * The "Support Tickets" database in the sync demo (NDSDatabasePreviewContent).
+ * Uses the design-system class names, so the CSS linked in layout.tsx styles it
+ * — no custom CSS needed. Colors are the LTR/light palette values (rebrand later
+ * via tokens). `revealed` controls the staggered row fade-in (rowFadeIn ->
+ * rowVisible); items are the 5 rows then the footer (index 5).
  */
 
 const LINE = "1px solid rgb(203, 203, 239)";

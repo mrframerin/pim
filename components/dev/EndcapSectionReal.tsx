@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { CSSProperties } from "react";
 
-/** Endcap — Any data. Any tool. Any agent. (main > [4]). Static section ported 1:1. */
+/** Endcap section — "Any data. Any tool. Any agent." */
 export default function EndcapSectionReal() {
   return (
     <section data-analytics-scroll-point="true" data-analytics-name="DevPlatformDiagram" className="surface surfaceNeutral surface_surfaceNeutral__1Cszl section_section__ppkch section_bgSurfaceNeutral__tqyxc section_hasBackground__xdoXy section_collapsible__OYoF5" style={{ "--section-paint": "var(--color-background-surface-neutral)" } as CSSProperties}>

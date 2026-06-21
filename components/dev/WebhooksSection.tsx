@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { CSSProperties } from "react";
 
-/** #webhooks — Trigger Notion workflows from anywhere. (main > [1] > [1.1.2]). Static section, real DOM ported 1:1. */
+/** Webhooks section (#webhooks) — "Trigger Notion workflows from anywhere." */
 export default function WebhooksSection() {
   return (
     <section className="section_section__ppkch section_collapsible__OYoF5" id="webhooks" data-analytics-scroll-point="true" data-analytics-name="DevPlatformWebhooks">

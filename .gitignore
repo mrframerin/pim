@@ -3,3 +3,7 @@ node_modules
 out
 .env*.local
 *.tsbuildinfo
+
+# Local-only working notes (not part of the deliverable)
+HANDOFF.md
+CONVERSION_PLAYBOOK.md

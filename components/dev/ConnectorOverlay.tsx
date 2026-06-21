@@ -1,7 +1,7 @@
 /**
  * Decorative connector graph overlaid on dev_connectorScope
  * (main > [1] > [1.1.5–33]): 13 vertices + 12 edges + 4 floating icons.
- * Absolutely positioned and animated entirely by the original compiled CSS via
+ * Absolutely positioned and animated entirely by the design-system CSS via
  * their exact ids/class names — no JS. Rendered as a fragment so they remain
  * direct children of dev_connectorScope.
  */

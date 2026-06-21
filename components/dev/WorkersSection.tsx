@@ -1,8 +1,7 @@
 /**
  * `#workers` — "All of this, on a hosted runtime." (main > [1] > [1.1.3])
- * Static section: real DOM ported 1:1, original class names kept verbatim.
- * The terminal output keeps its exact whitespace/markup via dangerouslySetInnerHTML
- * (the only sanctioned raw-HTML use — same pattern as the code block in SyncSection).
+ * Static section. The terminal output keeps its exact whitespace/markup via
+ * dangerouslySetInnerHTML (same pattern as the code block in SyncSection).
  */
 export default function WorkersSection() {
   return (

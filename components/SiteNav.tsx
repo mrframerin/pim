@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-/** Inline typography custom-props copied verbatim from the original CTA spans. */
+/** Inline typography custom-props for the CTA spans. */
 const TYPO_STYLE = {
   "--typography-font": "var(--typography-sans-100-medium-font)",
   "--typography-font-sm": "var(--typography-sans-100-medium-font)",

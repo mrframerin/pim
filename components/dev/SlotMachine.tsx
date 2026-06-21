@@ -3,15 +3,13 @@
 import { useEffect } from "react";
 
 /*
- * Drives the webhooks slot machine (real reels rendered statically in
- * WebhooksSection). Replays the captured behaviour: the event reel cycles
- * forward through the 5 triggers, the action reel lands on a random action, the
- * center label shows that trigger's webhook name; ~0.85s ease-out spin + ~2.5s
- * hold. Reuses the original DOM/CSS (transform on .reelTrack, .cellActive on the
- * centred cell) — same surface the original JS animates.
+ * Drives the webhooks slot machine (reels rendered statically in
+ * WebhooksSection): the event reel cycles forward through the 5 triggers, the
+ * action reel lands on a random action, the center label shows that trigger's
+ * webhook name; ~0.85s ease-out spin + ~2.5s hold. Animates via transform on
+ * .reelTrack and .cellActive on the centred cell.
  *
- * Lever (faithful to the original `en`/`O` components in the dev bundle): the
- * lever pulls — class `icons_leverPulling__LtvVs`, which runs the shaft/handle
+ * Lever: the lever pulls — class `icons_leverPulling__LtvVs`, which runs the shaft/handle
  * pull keyframes — ONCE on initial reveal (with the first spin, silent) and on
  * every manual click (with the slot sound). It does NOT pull on the periodic
  * auto-advance. `animationend` clears the class so it can replay. A click also
@@ -145,7 +143,7 @@ export default function SlotMachine() {
       );
     };
 
-    // Auto-advance loop (no lever pull, no sound — matches the original).
+    // Auto-advance loop (no lever pull, no sound).
     const scheduleAuto = () => {
       window.clearTimeout(autoTimer);
       autoTimer = window.setTimeout(() => {
