@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>agent run</title>
+<!-- The page's compiled CSS (so agentRunGame_* styles + tokens apply) -->
+<link rel="stylesheet" href="/notion-mirror/_next/static/css/ec32f51b3360f9b3.css" />
+<link rel="stylesheet" href="/notion-mirror/_next/static/css/b7d43c5e3eac98e1.css" />
+<style>
+  html, body { margin: 0; height: 100%; width: 100%; overflow: hidden; background: transparent; }
+  #game-root, #game-root > * { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="game-root"></div>
+<!--
+  Isolated boot of Notion's real footer game (AgentRunGameClient, webpack module
+  64204) — the user asked to reuse the original game JS verbatim. We load the
+  original runtime + framework + _app + dev-page + game chunks, grab
+  __webpack_require__ via the chunk-push executor trick, and render the component
+  ourselves. `main` is intentionally NOT loaded so the Next page bootstrap (and
+  its analytics) never auto-runs. This page is embedded via an <iframe> in the
+  footer so its second React/webpack instance stays isolated from the app.
+-->
+<script src="/notion-mirror/_next/static/chunks/polyfills-42372ed130431b0a.js"></script>
+<script>self.webpackChunk_N_E = self.webpackChunk_N_E || [];</script>
+<script src="/notion-mirror/_next/static/chunks/webpack-9e01118f4208e740.js"></script>
+<script src="/notion-mirror/_next/static/chunks/framework-561ca564ac48b603.js"></script>
+<script src="/notion-mirror/_next/static/chunks/pages/_app-38b44f6ed463a057.js"></script>
+<script src="/notion-mirror/_next/static/chunks/pages/product/dev-8cca527e41198f7b.js"></script>
+<script src="/notion-mirror/_next/static/chunks/64204.bad928abc388b73a.js"></script>
+<script>
+(function () {
+  // Capture webpack require via a no-module chunk whose runtime fn receives it.
+  self.webpackChunk_N_E.push([["__gameboot"], {}, function (req) { window.__wreq = req; }]);
+  var tries = 0;
+  function boot() {
+    var req = window.__wreq;
+    if (!req && tries++ < 100) return setTimeout(boot, 30);
+    try {
+      var React = req(667294);
+      var ReactDOMClient = req(620745);     // exports createRoot
+      var game = req(64204);                 // { AgentRunGameClient }
+      ReactDOMClient.createRoot(document.getElementById("game-root"))
+        .render(React.createElement(game.AgentRunGameClient));
+    } catch (e) {
+      console.error("[game boot]", e);
+      document.getElementById("game-root").setAttribute("data-game-error", String(e));
+    }
+  }
+  boot();
+})();
+</script>
+</body>
+</html>

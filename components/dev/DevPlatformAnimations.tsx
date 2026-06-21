@@ -1,0 +1,63 @@
+"use client";
+
+import { useEffect } from "react";
+
+function cycleTerminalLines() {
+  // NOTE: the sync-demo terminal + database are now driven faithfully by
+  // SyncSection/SyncDatabase (real captured timeline). Only the tools demo
+  // terminal remains here until ToolsSection gets the same treatment.
+  const sequences = [
+    {
+      selector: ".toolDemo_terminalLine__PpS8W",
+      messages: [
+        "Received tool call...",
+        "Generating presentation...",
+        "Done. Created deck."
+      ]
+    }
+  ];
+
+  const timers = sequences.map((sequence) => {
+    const lines = Array.from(document.querySelectorAll<HTMLElement>(sequence.selector));
+    let index = 0;
+
+    const render = () => {
+      lines.forEach((line, lineIndex) => {
+        const active = lineIndex === index % Math.max(lines.length, 1);
+        const message = sequence.messages[index % sequence.messages.length];
+        line.dataset.visible = active ? "true" : "false";
+        line.style.opacity = active ? "1" : "0";
+        if (active && message) {
+          line.innerHTML = `<span class="shimmerText_shimmerText___M45a">${message}</span>`;
+        }
+      });
+
+      index += 1;
+    };
+
+    render();
+    return window.setInterval(render, 1800);
+  });
+
+  return () => timers.forEach((timer) => window.clearInterval(timer));
+}
+
+// NOTE: the footer agent-run game is now the REAL Notion game, mounted via a
+// cropped same-origin iframe of the mirror — see components/dev/FooterGame.tsx
+// (approach A2). The previous hand-built canvas approximation (hydrateFooterGame)
+// has been removed; recover it from git history if ever needed.
+
+export default function DevPlatformAnimations() {
+  useEffect(() => {
+    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion) return;
+
+    const stopTerminalLines = cycleTerminalLines();
+
+    return () => {
+      stopTerminalLines();
+    };
+  }, []);
+
+  return null;
+}

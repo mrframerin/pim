@@ -1,19 +1,93 @@
+@import "tailwindcss";
+
+/*
+ * ───────────────────────────────────────────────────────────────────────────
+ * THEME TOKENS — rebrand happens here.
+ * Change these custom properties to recolor / re-type the whole site.
+ * Values were measured 1:1 from the original rendered page.
+ * ───────────────────────────────────────────────────────────────────────────
+ */
+@theme {
+  /* Brand palette */
+  --color-cobalt: #1313ba; /* hero background — rgb(19,19,186) */
+  --color-ink: #191918; /* near-black body text */
+  --color-paper: #ffffff;
+  --color-muted: rgba(255, 255, 255, 0.64);
+  --color-line: rgba(255, 255, 255, 0.16);
+
+  /* Typography */
+  --font-sans: "NotionInter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "LyonText", ui-serif, Georgia, serif;
+  --font-mono: "iAWriterMonoS", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Nav */
+  --nav-height: 64px;
+}
+
+/* ── Fonts ─────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "NotionInter";
+  src: url("/fonts/NotionInter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotionInter";
+  src: url("/fonts/NotionInter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotionInter";
+  src: url("/fonts/NotionInter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotionInter";
+  src: url("/fonts/NotionInter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "iAWriterMonoS";
+  src: url("/fonts/iAWriterMonoS-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "iAWriterMonoS";
+  src: url("/fonts/iAWriterMonoS-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
 html,
 body {
-  width: 100%;
-  min-height: 100%;
   margin: 0;
-  background: #fff;
+  padding: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
-body {
-  overflow: hidden;
+* {
+  box-sizing: border-box;
 }
 
-.notionMirror {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  border: 0;
-  background: #fff;
+/* ── Animations ────────────────────────────────────────────────────────── */
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[ticker_24s_linear_infinite\] {
+    animation: none;
+  }
 }

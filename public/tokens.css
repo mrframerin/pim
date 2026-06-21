@@ -1,0 +1,16 @@
+/*
+ * ───────────────────────────────────────────────────────────────────────────
+ * REBRAND TOKENS (placeholder)
+ *
+ * Intentionally empty for now. The original compiled CSS already sets the
+ * brand/palette variables correctly *per surface* (cobalt in the dark hero,
+ * light/neutral in the feature sections). Overriding shared variables like
+ * --color-background-base globally here breaks that per-surface logic
+ * (it tinted the neutral code panels cobalt and hid the syntax colors).
+ *
+ * When we do the rebrand pass, recolor by overriding the *source* brand
+ * variables (e.g. the dev-platform palette tokens) in a palette-scoped way,
+ * not the derived per-surface paint variables. Until then, leave appearance
+ * fully governed by the original CSS so the site stays 1:1.
+ * ───────────────────────────────────────────────────────────────────────────
+ */

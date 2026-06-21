@@ -1,0 +1,301 @@
+/*
+ * Styles for hand-rebuilt widgets that Notion renders via JS and are therefore
+ * NOT in the scraped HTML/CSS (so they must be reconstructed). First up: the
+ * Support Tickets database in the sync demo. Tuned to the reference screenshots.
+ */
+
+/*
+ * Notion registers --direction at runtime via CSS.registerProperty (a typed,
+ * inherited <number>, initial 1 for LTR). That JS doesn't run in this static
+ * rebuild, so every `transform/translate: …var(--direction)…` (connector icons,
+ * arrows, captions) would resolve to an invalid value and be dropped. Replicate
+ * the registration so they resolve exactly as on the original LTR page.
+ */
+@property --direction {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+
+.syncDatabase_root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--font-sans, "NotionInter", system-ui, sans-serif);
+  color: #1f1f3d;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.syncDatabase_toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px 6px;
+}
+.syncDatabase_title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.syncDatabase_titleIcon {
+  font-size: 18px;
+}
+.syncDatabase_tabs {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 8px;
+  color: #8a8aa8;
+  font-size: 13px;
+}
+.syncDatabase_tab {
+  cursor: default;
+}
+.syncDatabase_tabActive {
+  color: #1f1f3d;
+  font-weight: 600;
+}
+
+.syncDatabase_row {
+  display: grid;
+  grid-template-columns: minmax(0, 2.4fr) 1fr 1.2fr 1.4fr;
+  align-items: center;
+  border-top: 1px solid #ededf5;
+  padding: 0 18px;
+  min-height: 40px;
+}
+.syncDatabase_headerRow {
+  color: #8a8aa8;
+  font-size: 12px;
+  min-height: 36px;
+}
+.syncDatabase_cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.syncDatabase_docIcon {
+  color: #b8b8d0;
+  font-size: 13px;
+}
+.syncDatabase_colId {
+  color: #6b6b8a;
+}
+
+.syncDatabase_pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 10px;
+  border-radius: 6px;
+  background: #f0f0f7;
+  color: #4a4a6a;
+  font-size: 12px;
+}
+.syncDatabase_dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.devHydratedDatabase {
+  width: 100%;
+  height: 100%;
+  padding: 28px 34px 18px;
+  color: #1313ba;
+  background: #fff;
+  font-family: var(--font-sans, "NotionInter", system-ui, sans-serif);
+  overflow: hidden;
+}
+
+.devHydratedDatabase h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.devHydratedDbHeader,
+.devHydratedDbRow {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr;
+  align-items: center;
+  min-width: 680px;
+}
+
+.devHydratedDbHeader {
+  font-size: 16px;
+  border-bottom: 1px solid rgba(19, 19, 186, 0.22);
+  padding-bottom: 8px;
+}
+
+.devHydratedDbRow {
+  min-height: 43px;
+  border-bottom: 1px solid rgba(19, 19, 186, 0.18);
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.devHydratedDbRow > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-left: 1px solid rgba(19, 19, 186, 0.18);
+  padding-inline: 14px;
+}
+
+.devHydratedDbRow > span:first-child,
+.devHydratedDbHeader > span:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.devHydratedDbTitle {
+  text-overflow: ellipsis;
+}
+
+.devHydratedDbRow em {
+  display: inline-flex;
+  align-items: center;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #1313ba;
+  background: rgba(19, 19, 186, 0.1);
+}
+
+.devHydratedToolChat {
+  height: 100%;
+  width: 100%;
+  color: #1313ba;
+  padding: 44px 48px;
+  font-family: var(--font-sans, "NotionInter", system-ui, sans-serif);
+  overflow: hidden;
+}
+
+.devHydratedPrompt {
+  width: fit-content;
+  max-width: 520px;
+  margin-left: auto;
+  margin-bottom: 42px;
+  padding: 22px 26px;
+  border-radius: 24px;
+  background: #f0f0fb;
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+.devHydratedPrompt strong {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.devHydratedThought,
+.devHydratedReply {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  max-width: 650px;
+}
+
+.devHydratedThought p,
+.devHydratedReply p {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.devHydratedThought ol {
+  margin: 14px 0 44px;
+  padding: 0 0 0 28px;
+  color: rgba(19, 19, 186, 0.55);
+  font-size: 20px;
+  line-height: 2.05;
+}
+
+.devHydratedThought strong {
+  color: #1313ba;
+}
+
+.devHydratedAvatar {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: #1313ba;
+  background: #c9c9f4;
+  box-shadow: -5px 5px 0 #ececfa;
+  font-weight: 800;
+}
+
+.devHydratedAttachment {
+  margin: 24px 0 0 72px;
+  height: 72px;
+  border: 1px solid rgba(19, 19, 186, 0.12);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.footerMinimal_footerOuter__B6EDD {
+  background: #1313ba !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  --color-text-normal: rgba(255, 255, 255, 0.78);
+  --color-text-strong: #fff;
+  --color-text-muted: rgba(255, 255, 255, 0.46);
+  --color-border-base: rgba(255, 255, 255, 0.5);
+}
+
+.footerMinimal_footerOuter__B6EDD a,
+.footerMinimal_footerOuter__B6EDD button,
+.footerMinimal_footerOuter__B6EDD .linkText_linkText__527kz {
+  color: inherit;
+}
+
+.footerMinimal_footerOuter__B6EDD .commandCTA_commandContainer__AZ6SG {
+  background: #fff;
+  color: #1313ba;
+}
+
+.footerMinimal_footerOuter__B6EDD .languagePicker_menuButton___I2KV {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+}
+
+.footerMinimal_footerOuter__B6EDD .footerMinimal_bottomContent__2j_OX {
+  margin-inline: calc(var(--full-width-layout-margin, 0px));
+}
+
+.footerMinimal_footerOuter__B6EDD .dev_footerGameSection__QFwm_ {
+  padding-block: 0;
+}
+
+.footerMinimal_footerOuter__B6EDD .agentRunGame_shell__HAx6M {
+  min-height: 450px;
+}
