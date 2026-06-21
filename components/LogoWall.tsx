@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-const LOGO_BASE = "/notion-mirror/front-static/logos/generic/en";
+const LOGO_BASE = "/vendor/front-static/logos/generic/en";
 
 /** Logos in the "Trusted by engineers at" marquee (exact order + dimensions). */
 const LOGOS: { alt: string; file: string; w: number; h: number }[] = [

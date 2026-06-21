@@ -34,10 +34,10 @@ export default function ConnectorOverlay() {
       <span className="dev_connectorEdge__hQmMl dev_connectorEdge11to12___C6HK" />
       <span className="dev_connectorEdge__hQmMl dev_connectorEdge12to13__s5ELC" />
       {/* eslint-disable @next/next/no-img-element */}
-      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon1__aRoIZ" style={{ color: "transparent" } as React.CSSProperties} src="/notion-mirror/front-static/pages/dev/misc/tool.svg" />
-      <img alt="" loading="lazy" width="128" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon2__yYsoy" style={{ color: "transparent" } as React.CSSProperties} src="/notion-mirror/front-static/pages/dev/misc/worker-runtime.svg" />
-      <img alt="" loading="lazy" width="80" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon3__gs2Eg" style={{ color: "transparent" } as React.CSSProperties} src="/notion-mirror/front-static/pages/dev/misc/agent.svg" />
-      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon4__Lmsri" style={{ color: "transparent" } as React.CSSProperties} src="/notion-mirror/front-static/pages/dev/misc/plug.svg" />
+      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon1__aRoIZ" style={{ color: "transparent" } as React.CSSProperties} src="/vendor/front-static/pages/dev/misc/tool.svg" />
+      <img alt="" loading="lazy" width="128" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon2__yYsoy" style={{ color: "transparent" } as React.CSSProperties} src="/vendor/front-static/pages/dev/misc/worker-runtime.svg" />
+      <img alt="" loading="lazy" width="80" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon3__gs2Eg" style={{ color: "transparent" } as React.CSSProperties} src="/vendor/front-static/pages/dev/misc/agent.svg" />
+      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon4__Lmsri" style={{ color: "transparent" } as React.CSSProperties} src="/vendor/front-static/pages/dev/misc/plug.svg" />
       {/* eslint-enable @next/next/no-img-element */}
     </>
   );

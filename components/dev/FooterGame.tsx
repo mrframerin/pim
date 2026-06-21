@@ -12,7 +12,7 @@ import { useEffect, useRef, useState } from "react";
  * renders it inside react-intl's real `<IntlProvider>` (pulled from the bundle by
  * displayName) — resolving the `[React Intl] Could not find required intl object`
  * error that blocked a naive standalone mount. webpack's publicPath is baked to
- * `/notion-mirror/_next/`, so all assets/lazy chunks resolve against the mirror.
+ * `/vendor/_next/`, so all assets/lazy chunks resolve against the mirror.
  *
  * The game shell is `inline-size:100%` with `aspect-ratio:900/320` (desktop, the
  * footer look) — so at our full-bleed host width it renders ~1265×450, matching

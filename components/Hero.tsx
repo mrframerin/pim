@@ -3,7 +3,7 @@
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 
-const HERO_BASE = "/notion-mirror/front-static/pages/dev";
+const HERO_BASE = "/vendor/front-static/pages/dev";
 
 /** Cross-fades through a list of status lines on an interval (matches the
  *  original ~1.8s-per-step cycling). Pauses under prefers-reduced-motion. */

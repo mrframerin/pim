@@ -31,7 +31,7 @@ const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 const ACTIVE = "slotMachine_cellActive__20Hi5";
 const LEVER = "icons_lever__2zQae";
 const PULLING = "icons_leverPulling__LtvVs";
-const SLOT_SOUND = "/notion-mirror/front-static/pages/dev/slot/slot.mp3";
+const SLOT_SOUND = "/vendor/front-static/pages/dev/slot/slot.mp3";
 const INITIAL_PULL_MS = 300; // original pulls the lever ~300ms after the section enters view
 
 export default function SlotMachine() {

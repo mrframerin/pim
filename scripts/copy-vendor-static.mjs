@@ -3,22 +3,21 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-// The Notion mirror's webpack bundle requests lazily-loaded chunks from the
-// bare `/_next/static/...` public path (its internal publicPath is `/_next/`).
+// The vendored design-system bundle requests lazily-loaded chunks from the
+// bare `/_next/static/...` public path.
 //
 // Locally, the `fallback` rewrite in next.config.mjs maps `/_next/static/*` to
-// `/notion-mirror/_next/static/*`, so those chunks resolve. On Vercel, rewrites
-// under `/_next/*` are ignored (the path is reserved and served straight from
-// the build's static output), so the lazy chunks 404 -> ChunkLoadError ->
-// Notion's "Sorry, an error occurred" boundary fires on scroll.
+// `/vendor/_next/static/*`, so those chunks resolve. On Vercel, rewrites under
+// `/_next/*` are ignored (the path is reserved and served straight from the
+// build's static output), so the lazy chunks 404 -> ChunkLoadError on scroll.
 //
-// Fix: mirror the static assets into the real build output (`.next/static`),
-// which Vercel serves at `/_next/static/`. Existing host-app files are never
-// overwritten, so the outer page keeps its own chunks.
+// Fix: copy the vendored static assets into the real build output
+// (`.next/static`), which Vercel serves at `/_next/static/`. Existing host-app
+// files are never overwritten, so the outer page keeps its own chunks.
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const workspace = path.resolve(scriptDir, "..");
-const source = path.join(workspace, "public", "notion-mirror", "_next", "static");
+const source = path.join(workspace, "public", "vendor", "_next", "static");
 const target = path.join(workspace, ".next", "static");
 
 if (!existsSync(source) || !existsSync(target)) {
@@ -51,5 +50,5 @@ async function copyDir(from, to) {
 await copyDir(source, target);
 
 console.log(
-  `[copy-mirror-static] copied ${copied} file(s) into .next/static (skipped ${skipped} existing).`
+  `[copy-vendor-static] copied ${copied} file(s) into .next/static (skipped ${skipped} existing).`
 );

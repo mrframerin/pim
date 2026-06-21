@@ -11,8 +11,8 @@ export default function EndcapSectionReal() {
         </div>
       </div>
       <div className="dev_diagramContainer__Ggb1A">
-        <img alt="Diagram of Notion’s developer platform connecting external agents, data sources, and triggers to Notion context and custom agents through CLI, MCP, API, SDK, and workers." loading="lazy" width="1252" height="493" decoding="async" data-nimg="1" className="next-image dev_diagramDesktop__pmAHd" style={{ color: "transparent" } as CSSProperties} src="/notion-mirror/front-static/pages/dev/diagram/diagram.svg" />
-        <img alt="Diagram of Notion’s developer platform connecting external agents, data sources, and triggers to Notion context and custom agents through CLI, MCP, API, SDK, and workers." loading="lazy" width="345" height="484" decoding="async" data-nimg="1" className="next-image dev_diagramMobile__fIi_O" style={{ color: "transparent" } as CSSProperties} src="/notion-mirror/front-static/pages/dev/diagram/mobile.svg" />
+        <img alt="Diagram of Notion’s developer platform connecting external agents, data sources, and triggers to Notion context and custom agents through CLI, MCP, API, SDK, and workers." loading="lazy" width="1252" height="493" decoding="async" data-nimg="1" className="next-image dev_diagramDesktop__pmAHd" style={{ color: "transparent" } as CSSProperties} src="/vendor/front-static/pages/dev/diagram/diagram.svg" />
+        <img alt="Diagram of Notion’s developer platform connecting external agents, data sources, and triggers to Notion context and custom agents through CLI, MCP, API, SDK, and workers." loading="lazy" width="345" height="484" decoding="async" data-nimg="1" className="next-image dev_diagramMobile__fIi_O" style={{ color: "transparent" } as CSSProperties} src="/vendor/front-static/pages/dev/diagram/mobile.svg" />
       </div>
     </section>
   );

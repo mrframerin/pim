@@ -21,203 +21,203 @@ export default function WebhooksSection() {
         <div className="slotMachine_reel___iRMR">
           <div className="slotMachine_reelTrack__J2uLL" style={{ transform: "translateY(-2208px)", transition: "transform 600ms cubic-bezier(0.4, 0, 0.2, 1)" } as CSSProperties}>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
             <div className="slotMachine_cell__Hj357 slotMachine_cellActive__20Hi5">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/github.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">PR merged</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/stripe.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Customer canceled</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/greenhouse.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Candidate signed offer</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/docusign.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Contract signed</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/zendesk.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Issue escalated</span>
             </div>
           </div>
@@ -241,203 +241,203 @@ export default function WebhooksSection() {
         <div className="slotMachine_reel___iRMR">
           <div className="slotMachine_reelTrack__J2uLL" style={{ transform: "translateY(-2208px)", transition: "transform 600ms cubic-bezier(0.4, 0, 0.2, 1)" } as CSSProperties}>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Start experiment</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create incident</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send kudos to team</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create onboarding page</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Notify the CS team</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update task status</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Page on-call</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update opportunity</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send welcome email</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update customer record</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Start experiment</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create incident</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send kudos to team</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create onboarding page</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Notify the CS team</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update task status</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Page on-call</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update opportunity</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send welcome email</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update customer record</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Start experiment</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create incident</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send kudos to team</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create onboarding page</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Notify the CS team</span>
             </div>
             <div className="slotMachine_cell__Hj357 slotMachine_cellActive__20Hi5">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update task status</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Page on-call</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update opportunity</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send welcome email</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update customer record</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Start experiment</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create incident</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send kudos to team</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create onboarding page</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Notify the CS team</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update task status</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Page on-call</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update opportunity</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send welcome email</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update customer record</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/launchdarkly.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Start experiment</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/jira.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create incident</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send kudos to team</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Create onboarding page</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/slack.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Notify the CS team</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update task status</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/pagerduty.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Page on-call</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/salesforce.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update opportunity</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/gmail.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Send welcome email</span>
             </div>
             <div className="slotMachine_cell__Hj357">
-              <img src="/notion-mirror/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
+              <img src="/vendor/front-static/pages/dev/slot/notion.svg" alt="" className="slotMachine_cellIcon__IJBfY" width="32" height="32" />
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV slotMachine_cellLabel__hn6bH">Update customer record</span>
             </div>
           </div>

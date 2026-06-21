@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 /*
  * The page's original compiled stylesheets, loaded verbatim so the recreated
  * DOM matches 1:1 (resets, @layer order, fonts, keyframes all preserved).
- * url() references inside them resolve under /notion-mirror/ which is served
+ * url() references inside them resolve under /vendor/ which is served
  * from public/. Rebrand later by overriding the CSS custom properties
  * (design tokens) in app/tokens.css — see that file.
  *
@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <link
             key={id}
             rel="stylesheet"
-            href={`/notion-mirror/_next/static/css/${id}.css`}
+            href={`/vendor/_next/static/css/${id}.css`}
           />
         ))}
         <link rel="stylesheet" href="/tokens.css" />

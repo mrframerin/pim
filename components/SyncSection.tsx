@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import SyncDatabase from "@/components/SyncDatabase";
 
-const TABS_BASE = "/notion-mirror/front-static/pages/dev/tabs";
+const TABS_BASE = "/vendor/front-static/pages/dev/tabs";
 
 /** Source tabs (exact icons + labels + stacking order). */
 const SOURCE_TABS = [

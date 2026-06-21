@@ -26,7 +26,7 @@ export default function WorkersSection() {
               <pre className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV terminalRichText_terminalRichText__K1SQk" dangerouslySetInnerHTML={{ __html: "<code class=\"terminalRichText_code__rOL9k\"><small>$</small> ntn deploy worker\r\n<small>[build]</small> Deploying...\r\n<small>[build]</small> Uploading to Notion...\r\n<small>[build]</small> Worker updated...\r\n\r\nCapabilities:\r\n  <small>tool  queryCustomers</small>\r\n  <small>tool  moreOfficeSnacks</small>\r\n  <small>sync  linearTickets</small>\r\n\r\n\r\n</code>" }} />
             </div>
           </div>
-          <img className="dev_workersSubsectionTerminalIcon__4t5yM" src="/notion-mirror/front-static/pages/dev/misc/notionCircuit.svg" alt="" width="134" height="86" id="connector-anchor-workers-subsection-terminal-icon" />
+          <img className="dev_workersSubsectionTerminalIcon__4t5yM" src="/vendor/front-static/pages/dev/misc/notionCircuit.svg" alt="" width="134" height="86" id="connector-anchor-workers-subsection-terminal-icon" />
         </div>
       </div>
     </section>

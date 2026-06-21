@@ -27,31 +27,31 @@ export default function ExternalAgentsSectionReal() {
               <svg className="icons_tabBgPlate__OEtl6" width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M54.0234 1.5V3.02344H62.4043V6.07129H67.7383V9.11914H70.7861V12.167H73.833V15.2139H76.8809V18.2617H79.9287V23.5957H82.9766V31.9766H84.5V54.0234H82.9766V62.4043H79.9287V67.7383H76.8809V70.7861H73.833V73.833H70.7861V76.8809H67.7383V79.9287H62.4043V82.9766H54.0234V84.5H31.9766V82.9766H23.5957V79.9287H18.2617V76.8809H15.2139V73.833H12.167V70.7861H9.11914V67.7383H6.07129V62.4043H3.02344V54.0234H1.5V31.9766H3.02344V23.5957H6.07129V18.2617H9.11914V15.2139H12.167V12.167H15.2139V9.11914H18.2617V6.07129H23.5957V3.02344H31.9766V1.5H54.0234Z" fill="currentColor" stroke="var(--plate-stroke, currentColor)" strokeWidth="3" />
               </svg>
-              <img src="/notion-mirror/front-static/pages/dev/tabs/icon_codex.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
+              <img src="/vendor/front-static/pages/dev/tabs/icon_codex.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
             </div>
             <div className="icons_tab__0JptR" style={{ zIndex: "2" } as CSSProperties}>
               <svg className="icons_tabBgPlate__OEtl6" width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M54.0234 1.5V3.02344H62.4043V6.07129H67.7383V9.11914H70.7861V12.167H73.833V15.2139H76.8809V18.2617H79.9287V23.5957H82.9766V31.9766H84.5V54.0234H82.9766V62.4043H79.9287V67.7383H76.8809V70.7861H73.833V73.833H70.7861V76.8809H67.7383V79.9287H62.4043V82.9766H54.0234V84.5H31.9766V82.9766H23.5957V79.9287H18.2617V76.8809H15.2139V73.833H12.167V70.7861H9.11914V67.7383H6.07129V62.4043H3.02344V54.0234H1.5V31.9766H3.02344V23.5957H6.07129V18.2617H9.11914V15.2139H12.167V12.167H15.2139V9.11914H18.2617V6.07129H23.5957V3.02344H31.9766V1.5H54.0234Z" fill="currentColor" stroke="var(--plate-stroke, currentColor)" strokeWidth="3" />
               </svg>
-              <img src="/notion-mirror/front-static/pages/dev/tabs/icon_cursor-2.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
+              <img src="/vendor/front-static/pages/dev/tabs/icon_cursor-2.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
             </div>
             <div className="icons_tab__0JptR" style={{ zIndex: "3" } as CSSProperties}>
               <svg className="icons_tabBgPlate__OEtl6" width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M54.0234 1.5V3.02344H62.4043V6.07129H67.7383V9.11914H70.7861V12.167H73.833V15.2139H76.8809V18.2617H79.9287V23.5957H82.9766V31.9766H84.5V54.0234H82.9766V62.4043H79.9287V67.7383H76.8809V70.7861H73.833V73.833H70.7861V76.8809H67.7383V79.9287H62.4043V82.9766H54.0234V84.5H31.9766V82.9766H23.5957V79.9287H18.2617V76.8809H15.2139V73.833H12.167V70.7861H9.11914V67.7383H6.07129V62.4043H3.02344V54.0234H1.5V31.9766H3.02344V23.5957H6.07129V18.2617H9.11914V15.2139H12.167V12.167H15.2139V9.11914H18.2617V6.07129H23.5957V3.02344H31.9766V1.5H54.0234Z" fill="currentColor" stroke="var(--plate-stroke, currentColor)" strokeWidth="3" />
               </svg>
-              <img src="/notion-mirror/front-static/pages/dev/tabs/icon_decagon.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
+              <img src="/vendor/front-static/pages/dev/tabs/icon_decagon.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
             </div>
             <div className="icons_tab__0JptR" style={{ zIndex: "4" } as CSSProperties}>
               <svg className="icons_tabBgPlate__OEtl6" width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M54.0234 1.5V3.02344H62.4043V6.07129H67.7383V9.11914H70.7861V12.167H73.833V15.2139H76.8809V18.2617H79.9287V23.5957H82.9766V31.9766H84.5V54.0234H82.9766V62.4043H79.9287V67.7383H76.8809V70.7861H73.833V73.833H70.7861V76.8809H67.7383V79.9287H62.4043V82.9766H54.0234V84.5H31.9766V82.9766H23.5957V79.9287H18.2617V76.8809H15.2139V73.833H12.167V70.7861H9.11914V67.7383H6.07129V62.4043H3.02344V54.0234H1.5V31.9766H3.02344V23.5957H6.07129V18.2617H9.11914V15.2139H12.167V12.167H15.2139V9.11914H18.2617V6.07129H23.5957V3.02344H31.9766V1.5H54.0234Z" fill="currentColor" stroke="var(--plate-stroke, currentColor)" strokeWidth="3" />
               </svg>
-              <img src="/notion-mirror/front-static/pages/dev/tabs/icon-claude-2.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
+              <img src="/vendor/front-static/pages/dev/tabs/icon-claude-2.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
             </div>
             <div className="icons_tab__0JptR" style={{ zIndex: "5" } as CSSProperties}>
               <svg className="icons_tabBgPlate__OEtl6" width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M54.0234 1.5V3.02344H62.4043V6.07129H67.7383V9.11914H70.7861V12.167H73.833V15.2139H76.8809V18.2617H79.9287V23.5957H82.9766V31.9766H84.5V54.0234H82.9766V62.4043H79.9287V67.7383H76.8809V70.7861H73.833V73.833H70.7861V76.8809H67.7383V79.9287H62.4043V82.9766H54.0234V84.5H31.9766V82.9766H23.5957V79.9287H18.2617V76.8809H15.2139V73.833H12.167V70.7861H9.11914V67.7383H6.07129V62.4043H3.02344V54.0234H1.5V31.9766H3.02344V23.5957H6.07129V18.2617H9.11914V15.2139H12.167V12.167H15.2139V9.11914H18.2617V6.07129H23.5957V3.02344H31.9766V1.5H54.0234Z" fill="currentColor" stroke="var(--plate-stroke, currentColor)" strokeWidth="3" />
               </svg>
-              <img src="/notion-mirror/front-static/pages/dev/tabs/icon_amplitude-2.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
+              <img src="/vendor/front-static/pages/dev/tabs/icon_amplitude-2.svg" alt="" width="40" height="40" className="icons_tabIcon__qNE68" />
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function ExternalAgentsSectionReal() {
               <p className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantCardBody__E_9cg">Collaborate with agents like teammates. @mention them in any page, comment, or chat with them directly.</p>
             </div>
             <div className="block_blockMedia__tgELR block_mediaPlacementRight__6o28Y">
-              <img alt="A chat within Notion showing a user interacting with external agents to kick off a coding task." loading="lazy" width="1077" height="717" decoding="async" data-nimg="1" className="next-image" style={{ color: "transparent" } as CSSProperties} srcSet="/notion-mirror/front-static/pages/dev/byo/mention-agents.webp 1x, /notion-mirror/front-static/pages/dev/byo/mention-agents.webp 2x" src="/notion-mirror/front-static/pages/dev/byo/mention-agents.webp" />
+              <img alt="A chat within Notion showing a user interacting with external agents to kick off a coding task." loading="lazy" width="1077" height="717" decoding="async" data-nimg="1" className="next-image" style={{ color: "transparent" } as CSSProperties} srcSet="/vendor/front-static/pages/dev/byo/mention-agents.webp 1x, /vendor/front-static/pages/dev/byo/mention-agents.webp 2x" src="/vendor/front-static/pages/dev/byo/mention-agents.webp" />
             </div>
           </div>
         </article>
@@ -75,7 +75,7 @@ export default function ExternalAgentsSectionReal() {
               <p className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantCardBody__E_9cg">Hand off work to your agents from any task, or trigger them in parallel.</p>
             </div>
             <div className="block_blockMedia__tgELR block_mediaPlacementRight__6o28Y">
-              <img alt="Notion database with a list of tasks, and one task being assigned to an external coding agent." loading="lazy" width="1077" height="717" decoding="async" data-nimg="1" className="next-image" style={{ color: "transparent" } as CSSProperties} srcSet="/notion-mirror/front-static/pages/dev/byo/assign-to-agents.webp 1x, /notion-mirror/front-static/pages/dev/byo/assign-to-agents.webp 2x" src="/notion-mirror/front-static/pages/dev/byo/assign-to-agents.webp" />
+              <img alt="Notion database with a list of tasks, and one task being assigned to an external coding agent." loading="lazy" width="1077" height="717" decoding="async" data-nimg="1" className="next-image" style={{ color: "transparent" } as CSSProperties} srcSet="/vendor/front-static/pages/dev/byo/assign-to-agents.webp 1x, /vendor/front-static/pages/dev/byo/assign-to-agents.webp 2x" src="/vendor/front-static/pages/dev/byo/assign-to-agents.webp" />
             </div>
           </div>
         </article>
@@ -86,7 +86,7 @@ export default function ExternalAgentsSectionReal() {
               <p className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantCardBody__E_9cg">Watch agents think, call tools, and act across Notion and other apps with your review and approval when it matters.</p>
             </div>
             <div className="block_blockMedia__tgELR block_mediaPlacementRight__6o28Y">
-              <img alt="A chat with an external agent in Notion, showing its thought process, reading documents, and calling tools." loading="lazy" width="1077" height="717" decoding="async" data-nimg="1" className="next-image" style={{ color: "transparent" } as CSSProperties} srcSet="/notion-mirror/front-static/pages/dev/byo/generate.webp 1x, /notion-mirror/front-static/pages/dev/byo/generate.webp 2x" src="/notion-mirror/front-static/pages/dev/byo/generate.webp" />
+              <img alt="A chat with an external agent in Notion, showing its thought process, reading documents, and calling tools." loading="lazy" width="1077" height="717" decoding="async" data-nimg="1" className="next-image" style={{ color: "transparent" } as CSSProperties} srcSet="/vendor/front-static/pages/dev/byo/generate.webp 1x, /vendor/front-static/pages/dev/byo/generate.webp 2x" src="/vendor/front-static/pages/dev/byo/generate.webp" />
             </div>
           </div>
         </article>
