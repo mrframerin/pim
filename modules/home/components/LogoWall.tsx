@@ -17,20 +17,20 @@ const MARQUEE_STYLE = {
 
 export default function LogoWall() {
   return (
-    <div className="section_section__ppkch dev_logoWallSection__ISBHy">
-      <p className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalContext__VDlwW dev_logoWallEyebrow__JA6pv">
+    <div className="section-section dev-logo-wall-section">
+      <p className="semantic-typography-semantic-typography semantic-typography-variant-global-context dev-logo-wall-eyebrow">
         {c.eyebrow}
       </p>
       <div
         data-analytics-scroll-point="true"
         data-analytics-name="DevPlatformLogoWall"
-        className="logoWallMarquee_logoWallMarquee__DBKiq logoWallMarquee_variantMarquee__MVyGq logoWallMarquee_variantMarqueeSm__DfaGA logoWallMarquee_variantWallMd__RCWtC logoWallMarquee_variantWallLg__1TYHB logoWallMarquee_variantWallXl__ArxOR logoWallMarquee_variantWallXxl__1capG logoWallMarquee_hasMaxRows__tdKGa dev_logoWallMarquee__GbxQS logoWallMarquee_isOverflowing__uqT0t"
+        className="logo-wall-marquee-logo-wall-marquee logo-wall-marquee-variant-marquee logo-wall-marquee-variant-marquee-sm logo-wall-marquee-variant-wall-md logo-wall-marquee-variant-wall-lg logo-wall-marquee-variant-wall-xl logo-wall-marquee-variant-wall-xxl logo-wall-marquee-has-max-rows dev-logo-wall-marquee logo-wall-marquee-is-overflowing"
         style={MARQUEE_STYLE}
       >
         {LOGOS.map((logo) => (
           <span
             key={logo.alt}
-            className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz button_ghost__npAbk button_medium__VXS2i"
+            className="semantic-typography-semantic-typography semantic-typography-variant-interaction-button-medium button-button-2 logo-wall-marquee-logo-wall-marquee-item button-ghost button-medium"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -39,7 +39,7 @@ export default function LogoWall() {
               width={logo.w}
               height={logo.h}
               decoding="async"
-              className="next-image logo_logo__xQVjz logo_heightConstrained__wFlX5"
+              className="next-image logo-logo logo-height-constrained"
               src={`${LOGO_BASE}/${logo.file}`}
               style={
                 {

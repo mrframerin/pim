@@ -43,13 +43,13 @@ function Robot() {
 /** "Pitch deck" link chip (paper-plane noticon + underlined label). */
 function PitchLink() {
   return (
-    <span className="NDSChatPreviewContent_linkSegment__4Akqr" style={{ color: INK }}>
-      <span className="NDSChatPreviewContent_linkNoticon__Zb8WN">
-        <svg height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" className="NotionIconSvgWrapper_icon__8quiY">
+    <span className="nds-chat-preview-content-link-segment" style={{ color: INK }}>
+      <span className="nds-chat-preview-content-link-noticon">
+        <svg height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" className="notion-icon-svg-wrapper-icon">
           <path d="M15 11.25V15h-1.25l-1.875-1.875V15h-3.75v-1.875L6.25 15H5v-3.75l3.125-3.125v-3.75c0-2.119.719-3.125 1.875-3.125s1.875 1.006 1.875 3.125v3.75zm-5 4.688c-.69 0-1.25.559-1.25 1.25 0 .69.331 1.056 1.25 2.187.919-1.131 1.25-1.497 1.25-2.187 0-.691-.56-1.25-1.25-1.25" fill="currentColor" />
         </svg>
       </span>
-      <span className="NDSChatPreviewContent_bodyMedium__FzMFh NDSChatPreviewContent_linkText__Qanls" style={{ textDecorationColor: TINT }}>
+      <span className="nds-chat-preview-content-body-medium nds-chat-preview-content-link-text" style={{ textDecorationColor: TINT }}>
         {c.pitchLinkLabel}
       </span>
     </span>
@@ -58,21 +58,21 @@ function PitchLink() {
 
 function Rail({ topHidden = false, bottomHidden = false }: { topHidden?: boolean; bottomHidden?: boolean }) {
   const line = (hidden: boolean) =>
-    `${hidden ? "NDSChatPreviewContent_thoughtRailLineHidden__pHY2V " : ""}NDSChatPreviewContent_thoughtRailLine__b0eYu`;
+    `${hidden ? "nds-chat-preview-content-thought-rail-line-hidden " : ""}nds-chat-preview-content-thought-rail-line`;
   return (
-    <div className="NDSChatPreviewContent_thoughtRail__nrAfl">
+    <div className="nds-chat-preview-content-thought-rail">
       <div className={line(topHidden)} style={{ backgroundColor: TINT }} />
-      <div className="NDSChatPreviewContent_thoughtRailGap__AX96v" />
-      <div className="NDSChatPreviewContent_thoughtDot__fHBx8" style={{ backgroundColor: TINT }} />
-      <div className="NDSChatPreviewContent_thoughtRailGap__AX96v" />
+      <div className="nds-chat-preview-content-thought-rail-gap" />
+      <div className="nds-chat-preview-content-thought-dot" style={{ backgroundColor: TINT }} />
+      <div className="nds-chat-preview-content-thought-rail-gap" />
       <div className={line(bottomHidden)} style={{ backgroundColor: TINT }} />
     </div>
   );
 }
 
 const Connector = () => (
-  <div className="NDSChatPreviewContent_thoughtStepConnectorRail__nR_x7">
-    <div className="NDSChatPreviewContent_thoughtStepConnectorLine__ZME8g" style={{ backgroundColor: TINT }} />
+  <div className="nds-chat-preview-content-thought-step-connector-rail">
+    <div className="nds-chat-preview-content-thought-step-connector-line" style={{ backgroundColor: TINT }} />
   </div>
 );
 
@@ -87,7 +87,7 @@ export default function ToolChat() {
     const el = rootRef.current;
     if (!el) return;
     // .nds root is display:contents (no box), so observe the sized container.
-    const target = el.querySelector(".NDSChatPreviewContent_container__osvSn") ?? el;
+    const target = el.querySelector(".nds-chat-preview-content-container") ?? el;
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
       setRevealed(OFFSETS.length);
       return;
@@ -110,22 +110,22 @@ export default function ToolChat() {
   }, []);
 
   const fadeIn = (i: number) =>
-    `NDSChatPreviewContent_fadeIn__ejbv5${i < revealed ? " NDSChatPreviewContent_fadeInVisible__RIRjC" : ""}`;
+    `nds-chat-preview-content-fade-in${i < revealed ? " nds-chat-preview-content-fade-in-visible" : ""}`;
   const fadeUp = (i: number) =>
-    `NDSChatPreviewContent_fadeUp__a6x2Y${i < revealed ? " NDSChatPreviewContent_fadeUpVisible__XjJl9" : ""}`;
+    `nds-chat-preview-content-fade-up${i < revealed ? " nds-chat-preview-content-fade-up-visible" : ""}`;
   const thinking = revealed < 7;
 
   return (
-    <div ref={rootRef} className="nds NDSIslandProvider_root__Ma_XQ" data-display-mode="light">
-      <div className="NDSChatPreviewContent_container__osvSn" style={{ color: INK, backgroundColor: "rgb(255, 255, 255)" }}>
+    <div ref={rootRef} className="nds nds-island-provider-root" data-display-mode="light">
+      <div className="nds-chat-preview-content-container" style={{ color: INK, backgroundColor: "rgb(255, 255, 255)" }}>
         {/* 0 — user prompt */}
         <div className={fadeIn(0)}>
-          <div className="NDSChatPreviewContent_fadeClip__DqvDw">
-            <div className="NDSChatPreviewContent_userRow__yZ_CV">
-              <div className="NDSChatPreviewContent_userBubble__6i9am" style={{ backgroundColor: "rgb(246, 246, 252)", color: INK }}>
-                <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.userPromptBefore}</span>
+          <div className="nds-chat-preview-content-fade-clip">
+            <div className="nds-chat-preview-content-user-row">
+              <div className="nds-chat-preview-content-user-bubble" style={{ backgroundColor: "rgb(246, 246, 252)", color: INK }}>
+                <span className="nds-chat-preview-content-body-regular">{c.userPromptBefore}</span>
                 <PitchLink />
-                <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.userPromptAfter}</span>
+                <span className="nds-chat-preview-content-body-regular">{c.userPromptAfter}</span>
               </div>
             </div>
           </div>
@@ -133,50 +133,50 @@ export default function ToolChat() {
 
         {/* 1 — agent thought (with nested steps 2-6) */}
         <div className={fadeIn(1)}>
-          <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_chatItemSpacing___T1mw">
-            <div className="NDSChatPreviewContent_agentRow__7iyEZ">
-              <div className="NDSChatPreviewContent_agentIconSlot__bWGLG"><Robot /></div>
-              <div className="NDSChatPreviewContent_thoughtContainer__P_fKu" style={{ color: "rgba(19, 19, 186, 0.66)" }}>
-                <div className="NDSChatPreviewContent_thoughtHeaderRow__l61W8">
-                  <span className={`NDSChatPreviewContent_bodyRegular__P_pec${thinking ? " nds-shimmer-text" : ""}`}>
+          <div className="nds-chat-preview-content-fade-clip nds-chat-preview-content-chat-item-spacing">
+            <div className="nds-chat-preview-content-agent-row">
+              <div className="nds-chat-preview-content-agent-icon-slot"><Robot /></div>
+              <div className="nds-chat-preview-content-thought-container" style={{ color: "rgba(19, 19, 186, 0.66)" }}>
+                <div className="nds-chat-preview-content-thought-header-row">
+                  <span className={`nds-chat-preview-content-body-regular${thinking ? " nds-shimmer-text" : ""}`}>
                     {thinking ? c.thinkingLabel : c.thoughtLabel}
                   </span>
-                  <span className="NDSChatPreviewContent_thoughtHeaderChevron__HTytG">
+                  <span className="nds-chat-preview-content-thought-header-chevron">
                     <svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 20 20" className="arrowChevronSingleDown" style={{ width: "14px", height: "14px", display: "block", fill: "currentcolor", flexShrink: 0 }}>
                       <path d="M9.558 13.442c.244.244.64.244.884 0l5.4-5.4a.625.625 0 0 0-.884-.884L10 12.116 5.042 7.158a.625.625 0 1 0-.884.884z" />
                     </svg>
                   </span>
                 </div>
-                <div className="NDSChatPreviewContent_thoughtSteps__Iq2_d">
+                <div className="nds-chat-preview-content-thought-steps">
                   <div className={fadeIn(2)}>
-                    <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_thoughtStep__bxJMo">
+                    <div className="nds-chat-preview-content-fade-clip nds-chat-preview-content-thought-step">
                       <Rail topHidden />
                       <div>
-                        <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.stepLoadedPage}</span>
+                        <span className="nds-chat-preview-content-body-regular">{c.stepLoadedPage}</span>
                         <PitchLink />
                       </div>
                     </div>
                   </div>
                   <div className={fadeIn(3)}>
-                    <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_thoughtStepConnector__jrTXp"><Connector /></div>
+                    <div className="nds-chat-preview-content-fade-clip nds-chat-preview-content-thought-step-connector"><Connector /></div>
                   </div>
                   <div className={fadeIn(4)}>
-                    <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_thoughtStep__bxJMo">
+                    <div className="nds-chat-preview-content-fade-clip nds-chat-preview-content-thought-step">
                       <Rail />
                       <div>
-                        <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.stepCalledTool}</span>
-                        <span className="NDSChatPreviewContent_bodyMedium__FzMFh" style={{ color: INK }}>{c.stepToolName}</span>
+                        <span className="nds-chat-preview-content-body-regular">{c.stepCalledTool}</span>
+                        <span className="nds-chat-preview-content-body-medium" style={{ color: INK }}>{c.stepToolName}</span>
                       </div>
                     </div>
                   </div>
                   <div className={fadeIn(5)}>
-                    <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_thoughtStepConnector__jrTXp"><Connector /></div>
+                    <div className="nds-chat-preview-content-fade-clip nds-chat-preview-content-thought-step-connector"><Connector /></div>
                   </div>
                   <div className={fadeIn(6)}>
-                    <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_thoughtStep__bxJMo">
+                    <div className="nds-chat-preview-content-fade-clip nds-chat-preview-content-thought-step">
                       <Rail bottomHidden />
                       <div>
-                        <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.stepFinalized}</span>
+                        <span className="nds-chat-preview-content-body-regular">{c.stepFinalized}</span>
                       </div>
                     </div>
                   </div>
@@ -188,26 +188,26 @@ export default function ToolChat() {
 
         {/* 7 — agent reply + download (rows 8-9 fadeUp) */}
         <div className={fadeIn(7)}>
-          <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_chatItemSpacing___T1mw">
-            <div className="NDSChatPreviewContent_agentRow__7iyEZ">
-              <div className="NDSChatPreviewContent_agentIconSlot__bWGLG"><Robot /></div>
-              <div className="NDSChatPreviewContent_responseColumn__kQR_E">
-                <div className={`NDSChatPreviewContent_responseStepRow__wu_g0 ${fadeUp(8)}`}>
-                  <div className="NDSChatPreviewContent_fadeClip__DqvDw">
-                    <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.replyText}</span>
+          <div className="nds-chat-preview-content-fade-clip nds-chat-preview-content-chat-item-spacing">
+            <div className="nds-chat-preview-content-agent-row">
+              <div className="nds-chat-preview-content-agent-icon-slot"><Robot /></div>
+              <div className="nds-chat-preview-content-response-column">
+                <div className={`nds-chat-preview-content-response-step-row ${fadeUp(8)}`}>
+                  <div className="nds-chat-preview-content-fade-clip">
+                    <span className="nds-chat-preview-content-body-regular">{c.replyText}</span>
                   </div>
                 </div>
-                <div className={`NDSChatPreviewContent_responseStepRow__wu_g0 ${fadeUp(9)}`}>
-                  <div className="NDSChatPreviewContent_fadeClip__DqvDw">
-                    <div className="NDSChatPreviewContent_cardOuter__peZB_" style={{ borderColor: "rgba(203, 203, 239, 0.44)", backgroundColor: "rgb(255, 255, 255)" }}>
-                      <div className="NDSChatPreviewContent_cardColumn__o9tMu">
+                <div className={`nds-chat-preview-content-response-step-row ${fadeUp(9)}`}>
+                  <div className="nds-chat-preview-content-fade-clip">
+                    <div className="nds-chat-preview-content-card-outer" style={{ borderColor: "rgba(203, 203, 239, 0.44)", backgroundColor: "rgb(255, 255, 255)" }}>
+                      <div className="nds-chat-preview-content-card-column">
                         <div>
-                          <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.cardCreatedLabel}</span>
-                          <span className="NDSChatPreviewContent_bodyMedium__FzMFh" style={{ color: INK }}>{c.cardFileName}</span>
+                          <span className="nds-chat-preview-content-body-regular">{c.cardCreatedLabel}</span>
+                          <span className="nds-chat-preview-content-body-medium" style={{ color: INK }}>{c.cardFileName}</span>
                         </div>
-                        <span className="NDSChatPreviewContent_cardBadge__khCZB" style={{ backgroundColor: "rgba(203, 203, 239, 0.44)", color: INK }}>{c.cardBadgeLabel}</span>
+                        <span className="nds-chat-preview-content-card-badge" style={{ backgroundColor: "rgba(203, 203, 239, 0.44)", color: INK }}>{c.cardBadgeLabel}</span>
                       </div>
-                      <div className="NDSChatPreviewContent_cardIconSlot__MAOG3">
+                      <div className="nds-chat-preview-content-card-icon-slot">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
                           <path fill="#cbcbef" d="m27.3 25.38-2.25-16.5h-.168c-8.182.025-14.808 6.651-14.832 14.833v.168z" />
                           <path fill="#f6f6fc" d="M25.218 8.88h-.168v15l7.5 3 7.5-3v-.167C40.026 15.53 33.4 8.905 25.218 8.88" />

@@ -26,16 +26,16 @@ const LINKS: {
 
 export default function SiteNav() {
   return (
-    <div className="globalNavigation_globalNavigationWrapper__dUhMe globalNavigation_stickyWrapper__SYZfy globalNavigation_isDevPlatform__pmVGa">
+    <div className="global-navigation-global-navigation-wrapper global-navigation-sticky-wrapper global-navigation-is-dev-platform">
       <div
-        className="base_theme__K5IIh devPlatform_palette_theme__rni97 theme_theme__XHAvb"
+        className="base-theme dev-platform-palette-theme theme-theme"
         style={{ display: "contents" }}
       >
-        <nav className="globalNavigation_globalNavigation__7c1YP" aria-label="Main">
-          <div className="globalNavigation_container__x43sE">
-            <div className="globalNavigation_logoContainer__BR_e9">
+        <nav className="global-navigation-global-navigation" aria-label="Main">
+          <div className="global-navigation-container">
+            <div className="global-navigation-logo-container">
               <a
-                className="globalNavigation_logo__i44_w"
+                className="global-navigation-logo"
                 aria-label="Home"
                 href="#top"
               >
@@ -45,7 +45,7 @@ export default function SiteNav() {
                   viewBox="0 0 36 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="globalNavigation_logoStickerized__aqGkF"
+                  className="global-navigation-logo-stickerized"
                 >
                   <path
                     d="M30.378 2.28746H33.189V4.66528H36V31.6222H33.189V34H5.62201V31.6222H2.81101V29.3347H0V2.28746H2.81101V0H30.378V2.28746Z"
@@ -63,12 +63,12 @@ export default function SiteNav() {
               </a>
             </div>
 
-            <div className="globalNavigation_links__tZquA">
+            <div className="global-navigation-links">
               {LINKS.map((l) => (
                 <a
                   key={l.k}
-                  className={`globalNavigation_devPlatformLink__AA0Fn${
-                    l.external ? " globalNavigation_devPlatformLinkExternal__X1eDe" : ""
+                  className={`global-navigation-dev-platform-link${
+                    l.external ? " global-navigation-dev-platform-link-external" : ""
                   }`}
                   aria-keyshortcuts={l.k}
                   href={l.href}
@@ -76,33 +76,33 @@ export default function SiteNav() {
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
                 >
-                  <span className="globalNavigation_devPlatformLinkLetter__khM8T">
-                    <span className="globalNavigation_devPlatformLinkBracket__Etdsh">[</span>
-                    <span className="globalNavigation_devPlatformLinkChar__Ceb59">{l.k}</span>
-                    <span className="globalNavigation_devPlatformLinkBracket__Etdsh">]</span>
+                  <span className="global-navigation-dev-platform-link-letter">
+                    <span className="global-navigation-dev-platform-link-bracket">[</span>
+                    <span className="global-navigation-dev-platform-link-char">{l.k}</span>
+                    <span className="global-navigation-dev-platform-link-bracket">]</span>
                   </span>
-                  <span className="globalNavigation_devPlatformLinkLabel__zLjCc">{l.label}</span>
+                  <span className="global-navigation-dev-platform-link-label">{l.label}</span>
                 </a>
               ))}
             </div>
 
-            <div className="globalNavigation_actions__hEI1Y">
-              <span className="globalNavigation_primaryCta___fviu">
+            <div className="global-navigation-actions">
+              <span className="global-navigation-primary-cta">
                 <a
-                  className="button_button__atjat button_buttonVariantPrimary__mUFQZ button_buttonSizeM__NexGD globalNavigation_tryFreeCta__mNYk6"
+                  className="button-button button-button-variant-primary button-button-size-m global-navigation-try-free-cta"
                   href="#"
                 >
                   <span
-                    className="typography_typography__Exx2D globalNavigation_noWrap__Af_5S"
+                    className="typography-typography global-navigation-no-wrap"
                     style={TYPO_STYLE}
                   >
                     Get Notion free
                   </span>
                 </a>
               </span>
-              <span className="globalNavigation_secondaryActions__5gLqb">
-                <a className="globalNavigation_link__ofzIw" href="#">
-                  <span className="typography_typography__Exx2D" style={TYPO_STYLE}>
+              <span className="global-navigation-secondary-actions">
+                <a className="global-navigation-link" href="#">
+                  <span className="typography-typography" style={TYPO_STYLE}>
                     Log in
                   </span>
                 </a>

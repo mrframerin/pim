@@ -11,7 +11,7 @@ function cycleTerminalLines() {
   // gets the same treatment.
   const sequences = [
     {
-      selector: ".toolDemo_terminalLine__PpS8W",
+      selector: ".tool-demo-terminal-line",
       messages: c.terminalMessages
     }
   ];
@@ -27,7 +27,7 @@ function cycleTerminalLines() {
         line.dataset.visible = active ? "true" : "false";
         line.style.opacity = active ? "1" : "0";
         if (active && message) {
-          line.innerHTML = `<span class="shimmerText_shimmerText___M45a">${message}</span>`;
+          line.innerHTML = `<span class="shimmer-text-shimmer-text">${message}</span>`;
         }
       });
 

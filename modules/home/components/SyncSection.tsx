@@ -96,24 +96,24 @@ export default function SyncSection() {
 
   return (
     <section
-      className="section_section__ppkch section_collapsible__OYoF5"
+      className="section-section section-collapsible"
       id="sync"
       data-analytics-scroll-point="true"
       data-analytics-name="DevPlatformSync"
     >
       <div
-        className="sectionHeader_header__7hACT sectionHeader_alignStart__JDnog"
+        className="section-header-header section-header-align-start"
         id="connector-anchor-sync-subsection-header"
       >
-        <div className="sectionHeader_content__CrL0O">
-          <h2 className="sectionHeader_heading__tJvSy">{c.heading}</h2>
-          <p className="sectionHeader_subheading__51ZJh">{c.subheading}</p>
+        <div className="section-header-content">
+          <h2 className="section-header-heading">{c.heading}</h2>
+          <p className="section-header-subheading">{c.subheading}</p>
         </div>
       </div>
 
       <div className="flex flex-col items-stretch justify-start flex-nowrap inline-full gap-24">
         <div className="flex flex-row items-center justify-start flex-nowrap inline-full gap-16">
-          <div role="tablist" className="icons_tabList__Konb_">
+          <div role="tablist" className="icons-tab-list">
             {SOURCE_TABS.map((tab, i) => (
               <button
                 key={tab.label}
@@ -122,13 +122,13 @@ export default function SyncSection() {
                 aria-selected={i === active}
                 aria-label={tab.label}
                 onClick={() => setActive(i)}
-                className={`icons_tab__0JptR icons_interactive__cfwFj${
-                  i === active ? " icons_active__mOTj8" : ""
+                className={`icons-tab icons-interactive${
+                  i === active ? " icons-active" : ""
                 }`}
                 style={{ zIndex: SOURCE_TABS.length - i }}
               >
                 <svg
-                  className="icons_tabBgPlate__OEtl6"
+                  className="icons-tab-bg-plate"
                   width="86"
                   height="86"
                   viewBox="0 0 86 86"
@@ -149,7 +149,7 @@ export default function SyncSection() {
                   alt=""
                   width={40}
                   height={40}
-                  className="icons_tabIcon__qNE68"
+                  className="icons-tab-icon"
                 />
               </button>
             ))}
@@ -161,23 +161,23 @@ export default function SyncSection() {
           ref={demoRef}
           role="img"
           aria-label={c.demoAriaLabel}
-          className="syncDemo_container__X1CaI"
+          className="sync-demo-container"
           data-layout="stacked"
           data-phase={phase}
           id="connector-anchor-sync-demo"
         >
-          <div aria-hidden="true" className="syncDemo_inner__UsGDv">
-            <div className="surface surfaceBase surface_surfaceBase__UD3lo syncDemo_codeTerminal__bsNci">
-              <div id="connector-anchor-database-terminal" className="codeTerminalExample_container__GaMXg">
-                <div className="flex flex-row items-center justify-between flex-nowrap inline-full gap-12 codeTerminalExample_toolbar__4Qa1t">
-                  <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV codeTerminalExample_title__eRQ3k">
+          <div aria-hidden="true" className="sync-demo-inner">
+            <div className="surface surfaceBase surface-surface-base sync-demo-code-terminal">
+              <div id="connector-anchor-database-terminal" className="code-terminal-example-container">
+                <div className="flex flex-row items-center justify-between flex-nowrap inline-full gap-12 code-terminal-example-toolbar">
+                  <span className="semantic-typography-semantic-typography semantic-typography-variant-global-code code-terminal-example-title">
                     {c.codeCard.filename}
                   </span>
                   <a
                     href={c.codeCard.exampleHref}
-                    className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonSmall__LAKr_ button_button__bge_I codeTerminalExample_ctaButton__YqSt9 button_ghost__npAbk button_small__undru"
+                    className="semantic-typography-semantic-typography semantic-typography-variant-interaction-button-small button-button-2 code-terminal-example-cta-button button-ghost button-small"
                   >
-                    <span className="inline-flex flex-row items-center justify-start flex-nowrap inline-auto gap-4 codeTerminalExample_cta__L3sd5">
+                    <span className="inline-flex flex-row items-center justify-start flex-nowrap inline-auto gap-4 code-terminal-example-cta">
                       <svg width="25" height="25" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           fill="currentColor"
@@ -190,10 +190,10 @@ export default function SyncSection() {
                     </span>
                   </a>
                 </div>
-                <div className="codeTerminalExample_codeSnippetWrapper__DzLKI codeTerminalExample_isOverflowing____kfz">
-                  <div className="codeTerminalExample_codeSnippetScroll__G2lTC">
+                <div className="code-terminal-example-code-snippet-wrapper code-terminal-example-is-overflowing">
+                  <div className="code-terminal-example-code-snippet-scroll">
                     <pre
-                      className="codeSnippet_codeSnippet__Q2VMk codeTerminalExample_codeSnippet__4R6iH language-typescript"
+                      className="code-snippet-code-snippet code-terminal-example-code-snippet language-typescript"
                       tabIndex={0}
                       style={
                         {
@@ -209,15 +209,15 @@ export default function SyncSection() {
                     </pre>
                   </div>
                 </div>
-                <pre className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV terminalRichText_terminalRichText__K1SQk codeTerminalExample_terminal__UQ5fq">
-                  <code className="terminalRichText_code__rOL9k">
+                <pre className="semantic-typography-semantic-typography semantic-typography-variant-global-code terminal-rich-text-terminal-rich-text code-terminal-example-terminal">
+                  <code className="terminal-rich-text-code">
                     {c.terminal.header}{"\n"}
                     <small
-                      className="syncDemo_terminalLine__SFyTW"
+                      className="sync-demo-terminal-line"
                       data-phase={phase}
                       data-visible="true"
                     >
-                      <span className="shimmerText_shimmerText___M45a">{terminal}</span>
+                      <span className="shimmer-text-shimmer-text">{terminal}</span>
                     </small>
                   </code>
                 </pre>
@@ -225,9 +225,9 @@ export default function SyncSection() {
             </div>
             <div
               id="connector-anchor-database-slot"
-              className="notionAsset_notionAsset__VuHJN syncDemo_databaseSlot__FKQbF"
+              className="notion-asset-notion-asset sync-demo-database-slot"
             >
-              <div className="surface surfaceNeutral surface_surfaceNeutral__1Cszl syncDemo_databaseSurface__dt_js">
+              <div className="surface surfaceNeutral surface-surface-neutral sync-demo-database-surface">
                 {dbMounted && <SyncDatabase revealed={revealed} />}
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function SyncSection() {
         </div>
       </div>
 
-      <div className="flex dev_workersSubsectionSpacer__MEK_G" />
+      <div className="flex dev-workers-subsection-spacer" />
     </section>
   );
 }

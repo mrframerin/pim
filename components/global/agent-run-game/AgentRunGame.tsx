@@ -540,11 +540,11 @@ export default function AgentRunGame({ analyticsName = "dev_platform_game_start"
   }, []);
 
   return (
-    <div ref={shellRef} className="agentRunGame_shell__HAx6M" role="presentation" data-analytics-name={analyticsName}>
-      <canvas ref={canvasRef} className="agentRunGame_canvas__F6zn_" width={900} height={320} aria-hidden="true" />
+    <div ref={shellRef} className="agent-run-game-shell" role="presentation" data-analytics-name={analyticsName}>
+      <canvas ref={canvasRef} className="agent-run-game-canvas" width={900} height={320} aria-hidden="true" />
       <button
         type="button"
-        className="agentRunGame_overlayButton__HcigL"
+        className="agent-run-game-overlay-button"
         aria-label="Click to play"
         data-agent-run-allow-hotkeys="true"
         onPointerDown={() => jumpRef.current?.()}

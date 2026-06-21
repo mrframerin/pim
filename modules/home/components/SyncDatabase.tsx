@@ -96,10 +96,10 @@ const ROWS: Row[] = [
 function SelectBadge({ label, bg, border }: Badge) {
   return (
     <div
-      className="NDSDatabasePreviewContent_selectBadge__BPi6Y"
+      className="nds-database-preview-content-select-badge"
       style={{ backgroundColor: bg, border: border ?? "1px solid transparent" }}
     >
-      <span className="NDSDatabasePreviewContent_body__Q4V94">{label}</span>
+      <span className="nds-database-preview-content-body">{label}</span>
     </div>
   );
 }
@@ -115,40 +115,40 @@ const cell = (extra?: CSSProperties): CSSProperties => ({ borderBlockEnd: LINE, 
 
 export default function SyncDatabase({ revealed = ROWS.length + 1 }: { revealed?: number }) {
   const fade = (i: number) =>
-    `NDSDatabasePreviewContent_rowFadeIn__u1lJr${i < revealed ? " NDSDatabasePreviewContent_rowVisible__YfAbn" : ""}`;
+    `nds-database-preview-content-row-fade-in${i < revealed ? " nds-database-preview-content-row-visible" : ""}`;
 
   return (
-    <div className="nds NDSIslandProvider_root__Ma_XQ" data-display-mode="light">
+    <div className="nds nds-island-provider-root" data-display-mode="light">
       <div
-        className="NDSDatabasePreviewContent_container__No_ZE"
+        className="nds-database-preview-content-container"
         style={{ backgroundColor: "rgb(246, 246, 252)", color: "rgb(19, 19, 186)" }}
       >
-        <div className="NDSDatabasePreviewContent_titleHeader__SZ7OF">
-          <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="32" className="NotionIconSvgWrapper_icon__8quiY">
+        <div className="nds-database-preview-content-title-header">
+          <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="32" className="notion-icon-svg-wrapper-icon">
             <path d="M7.5 11.406c0 .403.034.785.09 1.156a7.5 7.5 0 0 1-1.965.25 7.8 7.8 0 0 1-1.778-.196A5.6 5.6 0 0 1 .469 13.75L0 13.047l1.572-1.572C.562 10.581 0 9.275 0 7.656 0 4.475 2.153 2.5 5.625 2.5c2.69 0 4.584 1.19 5.3 3.203C8.772 6.706 7.5 8.731 7.5 11.406m12.5 0c0-3.181-2.153-5.156-5.625-5.156S8.75 8.225 8.75 11.406c0 3.182 2.153 5.156 5.625 5.156a7.8 7.8 0 0 0 1.778-.196 5.6 5.6 0 0 0 3.378 1.134l.469-.703-1.572-1.572c1.01-.894 1.572-2.2 1.572-3.819" fill="currentColor" />
           </svg>
-          <h3 className="NDSDatabasePreviewContent_title__2FbtX">{content.title}</h3>
+          <h3 className="nds-database-preview-content-title">{content.title}</h3>
         </div>
-        <div className="NDSDatabasePreviewContent_column__MGDZ5">
-          <div className="NDSDatabasePreviewContent_row__X8Nb5" style={{ borderBlockEnd: LINE }}>
+        <div className="nds-database-preview-content-column">
+          <div className="nds-database-preview-content-row" style={{ borderBlockEnd: LINE }}>
             {COLUMNS.map((c) => (
-              <div key={c.label} className="NDSDatabasePreviewContent_headerCell__WDcJk" style={{ flex: c.flex }}>
+              <div key={c.label} className="nds-database-preview-content-header-cell" style={{ flex: c.flex }}>
                 {c.icon}
-                <span className="NDSDatabasePreviewContent_body__Q4V94">{c.label}</span>
+                <span className="nds-database-preview-content-body">{c.label}</span>
               </div>
             ))}
           </div>
           {ROWS.map((row, i) => (
-            <div key={row.title} className={`NDSDatabasePreviewContent_row__X8Nb5 ${fade(i)}`}>
-              <div className="NDSDatabasePreviewContent_cell__w72Fj" style={cell({ flex: "0 0 46%" })}>
+            <div key={row.title} className={`nds-database-preview-content-row ${fade(i)}`}>
+              <div className="nds-database-preview-content-cell" style={cell({ flex: "0 0 46%" })}>
                 <PageIcon />
-                <span className="NDSDatabasePreviewContent_bodyMedium__Skrjr">{row.title}</span>
+                <span className="nds-database-preview-content-body-medium">{row.title}</span>
               </div>
-              <div className="NDSDatabasePreviewContent_cell__w72Fj" style={cell({ flex: "0 0 27%", borderInlineStart: LINE })}>
+              <div className="nds-database-preview-content-cell" style={cell({ flex: "0 0 27%", borderInlineStart: LINE })}>
                 <SelectBadge {...row.csat} />
               </div>
-              <div className="NDSDatabasePreviewContent_cell__w72Fj" style={cell({ flex: "0 0 27%", borderInlineStart: LINE })}>
-                <div className="NDSDatabasePreviewContent_listCellContent__sgBLb">
+              <div className="nds-database-preview-content-cell" style={cell({ flex: "0 0 27%", borderInlineStart: LINE })}>
+                <div className="nds-database-preview-content-list-cell-content">
                   {row.tags.map((t) => (
                     <SelectBadge key={t.label} {...t} />
                   ))}
@@ -157,13 +157,13 @@ export default function SyncDatabase({ revealed = ROWS.length + 1 }: { revealed?
             </div>
           ))}
           <div
-            className={`NDSDatabasePreviewContent_footer__HwhDy ${fade(ROWS.length)}`}
+            className={`nds-database-preview-content-footer ${fade(ROWS.length)}`}
             style={{ color: "rgba(19, 19, 186, 0.66)" }}
           >
             <Icon name="plus">
               <path d="M10 3.59a.66.66 0 0 1 .66.66v5.09h5.09a.66.66 0 0 1 0 1.32h-5.09v5.09a.66.66 0 0 1-1.32 0v-5.09H4.25a.66.66 0 0 1 0-1.32h5.09V4.25a.66.66 0 0 1 .66-.66" />
             </Icon>
-            <span className="NDSDatabasePreviewContent_body__Q4V94">{content.footerLabel}</span>
+            <span className="nds-database-preview-content-body">{content.footerLabel}</span>
           </div>
         </div>
       </div>

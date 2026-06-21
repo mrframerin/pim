@@ -11,36 +11,36 @@ export default function ConnectorOverlay() {
   const c = home.connector;
   return (
     <>
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-1" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-2" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-3" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-4" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-5" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-6" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-7" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-8" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-9" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-10" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-11" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-12" />
-      <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-13" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge1to2__Knm0P" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge2to3__Qrs5c" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge3to4__p37TT" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge4to5__epL29" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge5to6__ENekd" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge6to7__aekVf" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge7to8__v_zqC" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge8to9__qrNiz" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge9to10__mFSAi" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge7to11__bzYX_" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge11to12___C6HK" />
-      <span className="dev_connectorEdge__hQmMl dev_connectorEdge12to13__s5ELC" />
+      <span className="dev-connector-vertex" id="connector-vertex-1" />
+      <span className="dev-connector-vertex" id="connector-vertex-2" />
+      <span className="dev-connector-vertex" id="connector-vertex-3" />
+      <span className="dev-connector-vertex" id="connector-vertex-4" />
+      <span className="dev-connector-vertex" id="connector-vertex-5" />
+      <span className="dev-connector-vertex" id="connector-vertex-6" />
+      <span className="dev-connector-vertex" id="connector-vertex-7" />
+      <span className="dev-connector-vertex" id="connector-vertex-8" />
+      <span className="dev-connector-vertex" id="connector-vertex-9" />
+      <span className="dev-connector-vertex" id="connector-vertex-10" />
+      <span className="dev-connector-vertex" id="connector-vertex-11" />
+      <span className="dev-connector-vertex" id="connector-vertex-12" />
+      <span className="dev-connector-vertex" id="connector-vertex-13" />
+      <span className="dev-connector-edge dev-connector-edge1to2" />
+      <span className="dev-connector-edge dev-connector-edge2to3" />
+      <span className="dev-connector-edge dev-connector-edge3to4" />
+      <span className="dev-connector-edge dev-connector-edge4to5" />
+      <span className="dev-connector-edge dev-connector-edge5to6" />
+      <span className="dev-connector-edge dev-connector-edge6to7" />
+      <span className="dev-connector-edge dev-connector-edge7to8" />
+      <span className="dev-connector-edge dev-connector-edge8to9" />
+      <span className="dev-connector-edge dev-connector-edge9to10" />
+      <span className="dev-connector-edge dev-connector-edge7to11" />
+      <span className="dev-connector-edge dev-connector-edge11to12" />
+      <span className="dev-connector-edge dev-connector-edge12to13" />
       {/* eslint-disable @next/next/no-img-element */}
-      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon1__aRoIZ" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.tool} />
-      <img alt="" loading="lazy" width="128" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon2__yYsoy" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.workerRuntime} />
-      <img alt="" loading="lazy" width="80" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon3__gs2Eg" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.agent} />
-      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon4__Lmsri" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.plug} />
+      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev-connector-icon dev-connector-icon1" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.tool} />
+      <img alt="" loading="lazy" width="128" height="80" decoding="async" data-nimg="1" className="next-image dev-connector-icon dev-connector-icon2" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.workerRuntime} />
+      <img alt="" loading="lazy" width="80" height="80" decoding="async" data-nimg="1" className="next-image dev-connector-icon dev-connector-icon3" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.agent} />
+      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev-connector-icon dev-connector-icon4" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.plug} />
       {/* eslint-enable @next/next/no-img-element */}
     </>
   );

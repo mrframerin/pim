@@ -11,7 +11,7 @@ import home from "@/modules/home/content/home.json";
  * webhook name; ~0.85s ease-out spin + ~2.5s hold. Animates via transform on
  * .reelTrack and .cellActive on the centred cell.
  *
- * Lever: the lever pulls — class `icons_leverPulling__LtvVs`, which runs the shaft/handle
+ * Lever: the lever pulls — class `icons-lever-pulling`, which runs the shaft/handle
  * pull keyframes — ONCE on initial reveal (with the first spin, silent) and on
  * every manual click (with the slot sound). It does NOT pull on the periodic
  * auto-advance. `animationend` clears the class so it can replay. A click also
@@ -30,22 +30,22 @@ const SPIN_MS = 850;
 const HOLD_MS = 2500;
 const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 
-const ACTIVE = "slotMachine_cellActive__20Hi5";
-const LEVER = "icons_lever__2zQae";
-const PULLING = "icons_leverPulling__LtvVs";
+const ACTIVE = "slot-machine-cell-active";
+const LEVER = "icons-lever";
+const PULLING = "icons-lever-pulling";
 const SLOT_SOUND = c.slotSound;
 const INITIAL_PULL_MS = 300; // original pulls the lever ~300ms after the section enters view
 
 export default function SlotMachine() {
   useEffect(() => {
-    const sm = document.querySelector<HTMLElement>(".slotMachine_slotMachine__USLkJ");
+    const sm = document.querySelector<HTMLElement>(".slot-machine-slot-machine");
     if (!sm) return;
-    const tracks = Array.from(sm.querySelectorAll<HTMLElement>(".slotMachine_reelTrack__J2uLL"));
+    const tracks = Array.from(sm.querySelectorAll<HTMLElement>(".slot-machine-reel-track"));
     if (tracks.length < 2) return;
     const [eventTrack, actionTrack] = tracks;
     const eventCells = Array.from(eventTrack.children) as HTMLElement[];
     const actionCells = Array.from(actionTrack.children) as HTMLElement[];
-    const tool = sm.querySelector<HTMLElement>(".slotMachine_centerLabelTool__EQBFd");
+    const tool = sm.querySelector<HTMLElement>(".slot-machine-center-label-tool");
     const lever = sm.querySelector<HTMLButtonElement>(`.${LEVER}`);
 
     let posE = 20;

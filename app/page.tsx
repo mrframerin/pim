@@ -18,19 +18,19 @@ import EndcapSectionReal from "@/modules/home/components/EndcapSectionReal";
 export default function Page() {
   return (
     <div
-      className="base_theme__K5IIh devPlatform_palette_theme__rni97 theme_theme__XHAvb"
+      className="base-theme dev-platform-palette-theme theme-theme"
       style={{ display: "contents" }}
     >
-      <div className="globalNavigation_scrollSentinel__gP74N" />
+      <div className="global-navigation-scroll-sentinel" />
       <SiteNav />
-      <main className="layout_layoutBase__qpePC layout_xl__0fxfK dev_page__Lwdlq">
+      <main className="layout-layout-base layout-xl dev-page">
         <Hero />
         <div
-          className="surface surfaceNeutral surface_surfaceNeutral__1Cszl section_section__ppkch section_bgSurfaceNeutral__tqyxc section_hasBackground__xdoXy"
+          className="surface surfaceNeutral surface-surface-neutral section-section section-bg-surface-neutral section-has-background"
           style={{ "--section-paint": "var(--color-background-surface-neutral)" } as CSSProperties}
         >
           <LogoWall />
-          <div className="dev_connectorScope__mWJKv">
+          <div className="dev-connector-scope">
             <SyncSection />
             <ToolsSection />
             <WebhooksSection />
@@ -43,13 +43,13 @@ export default function Page() {
         <PlatformSectionReal />
         <EndcapSectionReal />
       </main>
-      <div className="snackBar_snackBar__IYfOp">
-        <div role="status" className="snackBar_snackBarContent__DqGBm">
-          <p className="text_text__cG3pf text_textWeightRegular__lAQvj text_textColorWhite__H70dC text_textSizeBody__4q5Cs" />
+      <div className="snack-bar-snack-bar">
+        <div role="status" className="snack-bar-snack-bar-content">
+          <p className="text-text text-text-weight-regular text-text-color-white text-text-size-body" />
         </div>
       </div>
       <div
-        className="base_theme__K5IIh dark_palette_theme__mc9Q9 devPlatform_palette_theme__rni97 devPlatform_dark_palette_theme__i1hf_ theme_theme__XHAvb"
+        className="base-theme dark-palette-theme dev-platform-palette-theme dev-platform-dark-palette-theme theme-theme"
         style={{ display: "contents" }}
       >
         <Footer />

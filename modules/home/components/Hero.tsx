@@ -56,8 +56,8 @@ function DevTool({
 }) {
   const { text, visible } = useStatusCycle(messages, 1800, startDelay);
   return (
-    <div className={`devHeroAsset_heroDevTool__X9wt8 ${className}`}>
-      <div className="devTool_devTool__HQ8Uz">
+    <div className={`dev-hero-asset-hero-dev-tool ${className}`}>
+      <div className="dev-tool-dev-tool">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt=""
@@ -65,19 +65,19 @@ function DevTool({
           width={42}
           height={42}
           decoding="async"
-          className="next-image devHeroAsset_devToolIcon__Mw79x"
+          className="next-image dev-hero-asset-dev-tool-icon"
           src={icon}
           style={{ color: "transparent" }}
         />
-        <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV devTool_devToolTitle__71cm0">
+        <span className="semantic-typography-semantic-typography semantic-typography-variant-global-code dev-tool-dev-tool-title">
           {title}
         </span>
         <span
           data-visible={visible ? "true" : "false"}
           style={{ opacity: visible ? 1 : 0 }}
-          className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV devTool_devToolDescription__317o1 devTool_devToolDescriptionAnimated__Ow_5i"
+          className="semantic-typography-semantic-typography semantic-typography-variant-global-code dev-tool-dev-tool-description dev-tool-dev-tool-description-animated"
         >
-          <span className="shimmerText_shimmerText___M45a">{text}</span>
+          <span className="shimmer-text-shimmer-text">{text}</span>
         </span>
       </div>
     </div>
@@ -97,32 +97,32 @@ export default function Hero() {
 
   return (
     <div
-      className="base_theme__K5IIh dark_palette_theme__mc9Q9 devPlatform_palette_theme__rni97 devPlatform_dark_palette_theme__i1hf_ theme_theme__XHAvb"
+      className="base-theme dark-palette-theme dev-platform-palette-theme dev-platform-dark-palette-theme theme-theme"
       style={{ display: "contents" }}
     >
       <section
-        className="surface surfaceBase surface_surfaceBase__UD3lo section_section__ppkch section_bgBase__J7mP8 section_hasBackground__xdoXy isDevPlatformHero dev_heroBleed__1su2e"
+        className="surface surfaceBase surface-surface-base section-section section-bg-base section-has-background isDevPlatformHero dev-hero-bleed"
         style={{ "--section-paint": "var(--color-background-base)" } as CSSProperties}
       >
-        <header className="surface hero_container__aJcVj">
-          <div className="hero_hero__B6z_N">
-            <h1 className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalTitle__D1p6b">
+        <header className="surface hero-container">
+          <div className="hero-hero">
+            <h1 className="semantic-typography-semantic-typography semantic-typography-variant-global-title">
               {c.title}
             </h1>
-            <p className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalDeck__VQb79 hero_description__6vjku">
+            <p className="semantic-typography-semantic-typography semantic-typography-variant-global-deck hero-description">
               {c.description}
             </p>
             <div className="flex flex-col items-center justify-start flex-nowrap inline-full gap-16">
               <div className="flex flex-row items-center justify-start flex-nowrap inline-auto max-inline-full gap-0">
-                <div className="pt-8 pb-8 ps-16 pe-48 surface surfaceAccent surface_surfaceAccent___PDKt commandCTA_commandContainer__AZ6SG">
-                  <div className="commandCTA_commandMask__GCTUb commandCTA_isOverflowing__2oZdo">
+                <div className="pt-8 pb-8 ps-16 pe-48 surface surfaceAccent surface-surface-accent command-cta-command-container">
+                  <div className="command-cta-command-mask command-cta-is-overflowing">
                     <input
                       type="text"
                       readOnly
                       aria-label="Install command"
                       spellCheck={false}
                       autoComplete="off"
-                      className="commandCTA_command__sAhle"
+                      className="command-cta-command"
                       value={command}
                     />
                   </div>
@@ -131,11 +131,11 @@ export default function Hero() {
                     type="button"
                     aria-label="Copy to clipboard"
                     onClick={copy}
-                    className="iconButton_iconButton__wbWve iconButton_backgroundSizeFill__CK2pT commandCTA_copyButton__mgYzA"
+                    className="icon-button-icon-button icon-button-background-size-fill command-cta-copy-button"
                   >
-                    <span aria-hidden="true" className="iconButton_icon__sgIFz">
+                    <span aria-hidden="true" className="icon-button-icon">
                       <span
-                        className="graphic_graphic__jmWdv commandCTA_clipboardIcon__7Rlnz"
+                        className="graphic-graphic command-cta-clipboard-icon"
                         style={
                           {
                             "--graphic-icon-size": "var(--dimension-spacing-20)"
@@ -159,18 +159,18 @@ export default function Hero() {
                         </svg>
                       </span>
                     </span>
-                    <span aria-hidden="true" className="iconButton_focusRing__a1thx" />
+                    <span aria-hidden="true" className="icon-button-focus-ring" />
                   </button>
                 </div>
               </div>
-              <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalContext__VDlwW dev_cliCalloutTextCenter__7onaX">
+              <span className="semantic-typography-semantic-typography semantic-typography-variant-global-context dev-cli-callout-text-center">
                 {c.cliCallout.text}{" "}
                 <a
                   href={c.cliCallout.docsHref}
-                  className="InlineTextLink_inlineLink__oN8YM InlineTextLink_colorInherit__oGlTG"
+                  className="inline-text-link-inline-link inline-text-link-color-inherit"
                   target="_self"
                 >
-                  <span className="InlineTextLink_linkContent__SYI4r">{c.cliCallout.docsLabel}</span>
+                  <span className="inline-text-link-link-content">{c.cliCallout.docsLabel}</span>
                 </a>
               </span>
             </div>
@@ -180,9 +180,9 @@ export default function Hero() {
         <div
           role="img"
           aria-label="A database UI fading into a blueprint-themed UI, with terminal logs for syncs, agent tools, and external agents overlaid on top."
-          className="devHeroAsset_devHeroAsset__ToSMR"
+          className="dev-hero-asset-dev-hero-asset"
         >
-          <picture className="devHeroAsset_figure__CKBvi">
+          <picture className="dev-hero-asset-figure">
             {/*
               Responsive hero screenshot, matching the original:
               desktop = wide ui.webp, tablet = ui-tablet, mobile = ui-mobile2.
@@ -196,85 +196,85 @@ export default function Hero() {
               width={1170}
               height={1755}
               decoding="async"
-              className="next-image devHeroAsset_image__OE9F8"
+              className="next-image dev-hero-asset-image"
               src={`${HERO_BASE}${c.images.uiMobile}`}
               style={{ color: "transparent" }}
             />
           </picture>
 
           <DevTool
-            className="devHeroAsset_devToolWorkersZendeskSync__v4V4Y"
+            className="dev-hero-asset-dev-tool-workers-zendesk-sync"
             icon={`${HERO_BASE}${c.devTools.zendeskSync.icon}`}
             title={c.devTools.zendeskSync.title}
             startDelay={0}
             messages={c.devTools.zendeskSync.messages}
           />
-          <span className="devHeroAsset_vertex___Eliv devHeroAsset_zendeskVertex__JHOVr" />
-          <span className="devHeroAsset_edge__q6N8g devHeroAsset_zendeskEdgeVertical__mSl_q" />
-          <span className="devHeroAsset_edge__q6N8g devHeroAsset_zendeskEdgeHorizontal__xBpo3" />
+          <span className="dev-hero-asset-vertex dev-hero-asset-zendesk-vertex" />
+          <span className="dev-hero-asset-edge dev-hero-asset-zendesk-edge-vertical" />
+          <span className="dev-hero-asset-edge dev-hero-asset-zendesk-edge-horizontal" />
 
           <DevTool
-            className="devHeroAsset_devToolDataScoutAgentQueryTool__CpCog"
+            className="dev-hero-asset-dev-tool-data-scout-agent-query-tool"
             icon={`${HERO_BASE}${c.devTools.dataScoutQuery.icon}`}
             title={c.devTools.dataScoutQuery.title}
             startDelay={600}
             messages={c.devTools.dataScoutQuery.messages}
           />
-          <span className="devHeroAsset_vertex___Eliv devHeroAsset_dataScoutVertex__k3ql2" />
-          <span className="devHeroAsset_edge__q6N8g devHeroAsset_dataScoutEdgeVertical__qIE1Y" />
-          <span className="devHeroAsset_edge__q6N8g devHeroAsset_dataScoutEdgeHorizontal__ppTyA" />
+          <span className="dev-hero-asset-vertex dev-hero-asset-data-scout-vertex" />
+          <span className="dev-hero-asset-edge dev-hero-asset-data-scout-edge-vertical" />
+          <span className="dev-hero-asset-edge dev-hero-asset-data-scout-edge-horizontal" />
 
           <DevTool
-            className="devHeroAsset_devToolClaudeCode__oettv"
+            className="dev-hero-asset-dev-tool-claude-code"
             icon={`${HERO_BASE}${c.devTools.claudeCode.icon}`}
             title={c.devTools.claudeCode.title}
             startDelay={1200}
             messages={c.devTools.claudeCode.messages}
           />
-          <span className="devHeroAsset_vertex___Eliv devHeroAsset_claudeVertex__6v0dP" />
-          <span className="devHeroAsset_edge__q6N8g devHeroAsset_claudeEdgeVertical__ELROi" />
-          <span className="devHeroAsset_edge__q6N8g devHeroAsset_claudeEdgeHorizontal__MEi6p" />
+          <span className="dev-hero-asset-vertex dev-hero-asset-claude-vertex" />
+          <span className="dev-hero-asset-edge dev-hero-asset-claude-edge-vertical" />
+          <span className="dev-hero-asset-edge dev-hero-asset-claude-edge-horizontal" />
         </div>
 
-        <aside className="tickerVideo_tickerVideo__YVDH2 dev_keynoteTicker__UBHYM">
+        <aside className="ticker-video-ticker-video dev-keynote-ticker">
           <a
             target="_blank"
             href={c.keynote.href}
             rel="noopener noreferrer"
             aria-label={c.keynote.ariaLabel}
-            className="tickerVideo_tickerVideoThumbnail__2yqLI dev_keynoteThumbnail___eRBd"
+            className="ticker-video-ticker-video-thumbnail dev-keynote-thumbnail"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${HERO_BASE}${c.keynote.thumbnail}`}
               alt={c.keynote.thumbnailAlt}
-              className="tickerVideo_tickerVideoThumbnailImage__Q8E2T"
+              className="ticker-video-ticker-video-thumbnail-image"
               width={160}
               height={90}
               loading="lazy"
             />
-            <div className="tickerVideo_tickerVideoThumbnailOverlay__Q7UP4" />
-            <span className="tickerVideo_tickerVideoPlayButton__BfKjZ" aria-hidden="true">
+            <div className="ticker-video-ticker-video-thumbnail-overlay" />
+            <span className="ticker-video-ticker-video-play-button" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 width="1em"
-                className="NotionIconSvgWrapper_icon__8quiY"
+                className="notion-icon-svg-wrapper-icon"
               >
                 <path d="M15.625 9.375v1.25l-10 5h-1.25V4.375h1.25z" fill="currentColor" />
               </svg>
             </span>
           </a>
-          <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalBody__yYPP0">
+          <span className="semantic-typography-semantic-typography semantic-typography-variant-global-body">
             <span>{c.keynote.caption}</span>{" "}
             <a
               href={c.keynote.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="semanticTypography_semanticTypography__mWJkv linkText_linkText__527kz linkText_colorVariantPrimary__h6Nef linkText_underlineAlways__lY7C_ linkText_hasArrow__2BwWV tickerCta_tickerCta__YNSSM"
+              className="semantic-typography-semantic-typography link-text-link-text link-text-color-variant-primary link-text-underline-always link-text-has-arrow ticker-cta-ticker-cta"
             >
-              <span className="linkText_linkContent__1nr8w">{c.keynote.linkLabel}</span>
-              <span aria-hidden="true" className="arrow_arrow___6mKn arrow_arrowFlipRtl__ur0Ug">
+              <span className="link-text-link-content">{c.keynote.linkLabel}</span>
+              <span aria-hidden="true" className="arrow-arrow-2 arrow-arrow-flip-rtl">
                 →
               </span>
             </a>

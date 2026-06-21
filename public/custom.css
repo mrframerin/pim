@@ -261,7 +261,7 @@
   background: #fff;
 }
 
-.footerMinimal_footerOuter__B6EDD {
+.footer-minimal-footer-outer {
   background: #1313ba !important;
   color: rgba(255, 255, 255, 0.78) !important;
   --color-text-normal: rgba(255, 255, 255, 0.78);
@@ -270,30 +270,30 @@
   --color-border-base: rgba(255, 255, 255, 0.5);
 }
 
-.footerMinimal_footerOuter__B6EDD a,
-.footerMinimal_footerOuter__B6EDD button,
-.footerMinimal_footerOuter__B6EDD .linkText_linkText__527kz {
+.footer-minimal-footer-outer a,
+.footer-minimal-footer-outer button,
+.footer-minimal-footer-outer .link-text-link-text {
   color: inherit;
 }
 
-.footerMinimal_footerOuter__B6EDD .commandCTA_commandContainer__AZ6SG {
+.footer-minimal-footer-outer .command-cta-command-container {
   background: #fff;
   color: #1313ba;
 }
 
-.footerMinimal_footerOuter__B6EDD .languagePicker_menuButton___I2KV {
+.footer-minimal-footer-outer .language-picker-menu-button {
   border-color: rgba(255, 255, 255, 0.8);
   color: #fff;
 }
 
-.footerMinimal_footerOuter__B6EDD .footerMinimal_bottomContent__2j_OX {
+.footer-minimal-footer-outer .footer-minimal-bottom-content {
   margin-inline: calc(var(--full-width-layout-margin, 0px));
 }
 
-.footerMinimal_footerOuter__B6EDD .dev_footerGameSection__QFwm_ {
+.footer-minimal-footer-outer .dev-footer-game-section {
   padding-block: 0;
 }
 
-.footerMinimal_footerOuter__B6EDD .agentRunGame_shell__HAx6M {
+.footer-minimal-footer-outer .agent-run-game-shell {
   min-height: 450px;
 }
