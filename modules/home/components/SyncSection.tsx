@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import SyncDatabase from "@/components/SyncDatabase";
+import SyncDatabase from "@/modules/home/components/SyncDatabase";
 
 const TABS_BASE = "/vendor/front-static/pages/dev/tabs";
 

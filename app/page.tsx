@@ -1,19 +1,19 @@
 import type { CSSProperties } from "react";
-import SiteNav from "@/components/SiteNav";
-import Hero from "@/components/Hero";
-import LogoWall from "@/components/LogoWall";
-import SyncSection from "@/components/SyncSection";
-import ToolsSection from "@/components/dev/ToolsSection";
-import WorkersSection from "@/components/dev/WorkersSection";
-import WebhooksSection from "@/components/dev/WebhooksSection";
-import Ticker from "@/components/dev/Ticker";
-import ConnectorOverlay from "@/components/dev/ConnectorOverlay";
-import SlotMachine from "@/components/dev/SlotMachine";
-import DevPlatformAnimations from "@/components/dev/DevPlatformAnimations";
-import ExternalAgentsSectionReal from "@/components/dev/ExternalAgentsSectionReal";
-import PlatformSectionReal from "@/components/dev/PlatformSectionReal";
-import EndcapSectionReal from "@/components/dev/EndcapSectionReal";
-import Footer from "@/components/dev/Footer";
+import SiteNav from "@/components/global/SiteNav";
+import Footer from "@/components/global/Footer";
+import Hero from "@/modules/home/components/Hero";
+import LogoWall from "@/modules/home/components/LogoWall";
+import SyncSection from "@/modules/home/components/SyncSection";
+import ToolsSection from "@/modules/home/components/ToolsSection";
+import WorkersSection from "@/modules/home/components/WorkersSection";
+import WebhooksSection from "@/modules/home/components/WebhooksSection";
+import Ticker from "@/modules/home/components/Ticker";
+import ConnectorOverlay from "@/modules/home/components/ConnectorOverlay";
+import SlotMachine from "@/modules/home/components/SlotMachine";
+import DevPlatformAnimations from "@/modules/home/components/DevPlatformAnimations";
+import ExternalAgentsSectionReal from "@/modules/home/components/ExternalAgentsSectionReal";
+import PlatformSectionReal from "@/modules/home/components/PlatformSectionReal";
+import EndcapSectionReal from "@/modules/home/components/EndcapSectionReal";
 
 export default function Page() {
   return (

@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import ToolChat from "@/components/dev/ToolChat";
+import ToolChat from "@/modules/home/components/ToolChat";
 
 /** Tools section (#tools) — "Build any tool for your agents."
  *  The first carousel slide's chat is the NDSChatPreviewContent (ToolChat). */

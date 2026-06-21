@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import FooterGame from "@/components/dev/FooterGame";
+import FooterGame from "@/components/global/FooterGame";
 
 /** Footer (minimal variant). The agent-run game inside dev_footerGameSection is rendered by FooterGame. */
 export default function Footer() {
