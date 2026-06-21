@@ -1,11 +1,9 @@
-// Sprite art, palettes, and constants for the "ntn run" pixel-art canvas game.
-// Extracted verbatim from the minified webpack chunk
-// public/vendor/_next/static/chunks/64204.bad928abc388b73a.js
+// Sprite art, palettes, and physics constants for the "ntn run" pixel-art
+// canvas game (rendered by ./AgentRunGame.tsx).
 //
-// Encoding in the source: a sprite def is { width, height, palette, pixels: string[] }.
-// The bake function b(def, scale) iterates rows (pixels[y]); for each char it looks up
-// palette[char] and fills a pixel only when the palette has that key. Any char NOT in the
-// palette (the source uses ".") is transparent. Here transparent is normalized to " ".
+// Each sprite is a pixel map: { w, h, rows } where rows[y] is a string of length w
+// and each char is a palette key (" " = transparent). The bake() helper in
+// AgentRunGame fills one rect per non-transparent cell at an integer scale.
 
 export type SpriteDef = { w: number; h: number; rows: string[] }; // rows[y] is a string of length w; each char is a palette key or " " for transparent
 
