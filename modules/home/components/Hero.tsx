@@ -2,8 +2,11 @@
 
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
+import home from "@/modules/home/content/home.json";
 
-const HERO_BASE = "/vendor/front-static/pages/dev";
+const c = home.hero;
+
+const HERO_BASE = c.heroBase;
 
 /** Cross-fades through a list of status lines on an interval (matches the
  *  original ~1.8s-per-step cycling). Pauses under prefers-reduced-motion. */
@@ -83,7 +86,7 @@ function DevTool({
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
-  const command = "curl -fsSL https://ntn.dev | bash";
+  const command = c.command;
 
   const copy = () => {
     navigator.clipboard?.writeText(command).then(() => {
@@ -104,10 +107,10 @@ export default function Hero() {
         <header className="surface hero_container__aJcVj">
           <div className="hero_hero__B6z_N">
             <h1 className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalTitle__D1p6b">
-              /dev/notion
+              {c.title}
             </h1>
             <p className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalDeck__VQb79 hero_description__6vjku">
-              Not just another CRUD API for your SaaS.
+              {c.description}
             </p>
             <div className="flex flex-col items-center justify-start flex-nowrap inline-full gap-16">
               <div className="flex flex-row items-center justify-start flex-nowrap inline-auto max-inline-full gap-0">
@@ -161,13 +164,13 @@ export default function Hero() {
                 </div>
               </div>
               <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalContext__VDlwW dev_cliCalloutTextCenter__7onaX">
-                Start building on the Notion CLI or{" "}
+                {c.cliCallout.text}{" "}
                 <a
-                  href="#docs"
+                  href={c.cliCallout.docsHref}
                   className="InlineTextLink_inlineLink__oN8YM InlineTextLink_colorInherit__oGlTG"
                   target="_self"
                 >
-                  <span className="InlineTextLink_linkContent__SYI4r">read our docs</span>
+                  <span className="InlineTextLink_linkContent__SYI4r">{c.cliCallout.docsLabel}</span>
                 </a>
               </span>
             </div>
@@ -184,8 +187,8 @@ export default function Hero() {
               Responsive hero screenshot, matching the original:
               desktop = wide ui.webp, tablet = ui-tablet, mobile = ui-mobile2.
             */}
-            <source media="(min-width: 1080px)" srcSet={`${HERO_BASE}/hero/ui.webp`} />
-            <source media="(min-width: 768px)" srcSet={`${HERO_BASE}/hero/ui-tablet.webp`} />
+            <source media="(min-width: 1080px)" srcSet={`${HERO_BASE}${c.images.uiDesktop}`} />
+            <source media="(min-width: 768px)" srcSet={`${HERO_BASE}${c.images.uiTablet}`} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt=""
@@ -194,23 +197,17 @@ export default function Hero() {
               height={1755}
               decoding="async"
               className="next-image devHeroAsset_image__OE9F8"
-              src={`${HERO_BASE}/hero/ui-mobile2.webp`}
+              src={`${HERO_BASE}${c.images.uiMobile}`}
               style={{ color: "transparent" }}
             />
           </picture>
 
           <DevTool
             className="devHeroAsset_devToolWorkersZendeskSync__v4V4Y"
-            icon={`${HERO_BASE}/misc/circuit.svg`}
-            title="Workers > sync:Zendesk"
+            icon={`${HERO_BASE}${c.devTools.zendeskSync.icon}`}
+            title={c.devTools.zendeskSync.title}
             startDelay={0}
-            messages={[
-              "Beginning sync...",
-              "Checking Zendesk...",
-              "Found 5 new tickets...",
-              "Syncing 5 tickets...",
-              "Done. Synced 5 tickets."
-            ]}
+            messages={c.devTools.zendeskSync.messages}
           />
           <span className="devHeroAsset_vertex___Eliv devHeroAsset_zendeskVertex__JHOVr" />
           <span className="devHeroAsset_edge__q6N8g devHeroAsset_zendeskEdgeVertical__mSl_q" />
@@ -218,16 +215,10 @@ export default function Hero() {
 
           <DevTool
             className="devHeroAsset_devToolDataScoutAgentQueryTool__CpCog"
-            icon={`${HERO_BASE}/misc/circuit.svg`}
-            title="Data Scout > tool:Query"
+            icon={`${HERO_BASE}${c.devTools.dataScoutQuery.icon}`}
+            title={c.devTools.dataScoutQuery.title}
             startDelay={600}
-            messages={[
-              "Received tool call...",
-              "Constructing query...",
-              "Querying warehouse...",
-              "Found 47 rows in 142 ms...",
-              "Done. Returned 47 rows."
-            ]}
+            messages={c.devTools.dataScoutQuery.messages}
           />
           <span className="devHeroAsset_vertex___Eliv devHeroAsset_dataScoutVertex__k3ql2" />
           <span className="devHeroAsset_edge__q6N8g devHeroAsset_dataScoutEdgeVertical__qIE1Y" />
@@ -235,16 +226,10 @@ export default function Hero() {
 
           <DevTool
             className="devHeroAsset_devToolClaudeCode__oettv"
-            icon={`${HERO_BASE}/misc/claude.svg`}
-            title="Claude Code"
+            icon={`${HERO_BASE}${c.devTools.claudeCode.icon}`}
+            title={c.devTools.claudeCode.title}
             startDelay={1200}
-            messages={[
-              "Received user request...",
-              "Analyzing codebase...",
-              "Implementing ask...",
-              "Running tests...",
-              "Done. PR #8527 open."
-            ]}
+            messages={c.devTools.claudeCode.messages}
           />
           <span className="devHeroAsset_vertex___Eliv devHeroAsset_claudeVertex__6v0dP" />
           <span className="devHeroAsset_edge__q6N8g devHeroAsset_claudeEdgeVertical__ELROi" />
@@ -254,15 +239,15 @@ export default function Hero() {
         <aside className="tickerVideo_tickerVideo__YVDH2 dev_keynoteTicker__UBHYM">
           <a
             target="_blank"
-            href="#keynote"
+            href={c.keynote.href}
             rel="noopener noreferrer"
-            aria-label="Watch the keynote"
+            aria-label={c.keynote.ariaLabel}
             className="tickerVideo_tickerVideoThumbnail__2yqLI dev_keynoteThumbnail___eRBd"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${HERO_BASE}/keynote-ticker/NotionDeveloperPlatform-Keynote.jpg`}
-              alt="Watch the keynote"
+              src={`${HERO_BASE}${c.keynote.thumbnail}`}
+              alt={c.keynote.thumbnailAlt}
               className="tickerVideo_tickerVideoThumbnailImage__Q8E2T"
               width={160}
               height={90}
@@ -281,14 +266,14 @@ export default function Hero() {
             </span>
           </a>
           <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalBody__yYPP0">
-            <span>See the Developer Platform in action.</span>{" "}
+            <span>{c.keynote.caption}</span>{" "}
             <a
-              href="#keynote"
+              href={c.keynote.href}
               target="_blank"
               rel="noopener noreferrer"
               className="semanticTypography_semanticTypography__mWJkv linkText_linkText__527kz linkText_colorVariantPrimary__h6Nef linkText_underlineAlways__lY7C_ linkText_hasArrow__2BwWV tickerCta_tickerCta__YNSSM"
             >
-              <span className="linkText_linkContent__1nr8w">Watch the keynote</span>
+              <span className="linkText_linkContent__1nr8w">{c.keynote.linkLabel}</span>
               <span aria-hidden="true" className="arrow_arrow___6mKn arrow_arrowFlipRtl__ur0Ug">
                 →
               </span>

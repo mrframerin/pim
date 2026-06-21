@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
+import home from "@/modules/home/content/home.json";
+
+const c = home.toolDemo;
 
 function cycleTerminalLines() {
   // NOTE: the sync-demo terminal + database are driven by SyncSection/
@@ -9,11 +12,7 @@ function cycleTerminalLines() {
   const sequences = [
     {
       selector: ".toolDemo_terminalLine__PpS8W",
-      messages: [
-        "Received tool call...",
-        "Generating presentation...",
-        "Done. Created deck."
-      ]
+      messages: c.terminalMessages
     }
   ];
 

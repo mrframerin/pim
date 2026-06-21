@@ -2,15 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import SyncDatabase from "@/modules/home/components/SyncDatabase";
+import home from "@/modules/home/content/home.json";
 
-const TABS_BASE = "/vendor/front-static/pages/dev/tabs";
+const c = home.sync;
+
+const TABS_BASE = c.tabsBase;
 
 /** Source tabs (exact icons + labels + stacking order). */
-const SOURCE_TABS = [
-  { label: "Zendesk", icon: "icon_zendesk.svg" },
-  { label: "Salesforce", icon: "icon_cloud.svg" },
-  { label: "Linear", icon: "icon_linear-2.svg" }
-];
+const SOURCE_TABS = c.sourceTabs;
 
 /** Shared "stickerized" background plate behind each source icon. */
 const PLATE_PATH =
@@ -56,7 +55,7 @@ export default function SyncSection() {
   // terminal text + phase + staggered DB row reveal.
   const demoRef = useRef<HTMLDivElement>(null);
   const [phase, setPhase] = useState<"intro" | "syncing" | "done">("intro");
-  const [terminal, setTerminal] = useState("Connecting. Found 5 new tickets...");
+  const [terminal, setTerminal] = useState(c.terminal.connecting);
   const [dbMounted, setDbMounted] = useState(false);
   const [revealed, setRevealed] = useState(0);
 
@@ -65,7 +64,7 @@ export default function SyncSection() {
     if (!el) return;
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
       setPhase("done");
-      setTerminal("Done. Synced 5 tickets in 764 ms.");
+      setTerminal(c.terminal.done);
       setDbMounted(true);
       setRevealed(6);
       return;
@@ -79,13 +78,13 @@ export default function SyncSection() {
       at(680, () => setDbMounted(true));
       at(722, () => setRevealed(1));
       at(1227, () => { setPhase("syncing"); setRevealed(2); });
-      at(1444, () => setTerminal("Syncing 5 tickets..."));
+      at(1444, () => setTerminal(c.terminal.syncing));
       at(1695, () => setRevealed(3));
       at(2262, () => setRevealed(4));
       at(2600, () => setRevealed(5));
       at(2729, () => setRevealed(6));
       at(3206, () => setPhase("done"));
-      at(3544, () => setTerminal("Done. Synced 5 tickets in 764 ms."));
+      at(3544, () => setTerminal(c.terminal.done));
     };
     const io = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting) { run(); io.disconnect(); } }),
@@ -107,11 +106,8 @@ export default function SyncSection() {
         id="connector-anchor-sync-subsection-header"
       >
         <div className="sectionHeader_content__CrL0O">
-          <h2 className="sectionHeader_heading__tJvSy">Sync any data source into Notion.</h2>
-          <p className="sectionHeader_subheading__51ZJh">
-            Continuously upsert external records into a Notion Database with Workers, a
-            declarative schema, and a persistent cursor.
-          </p>
+          <h2 className="sectionHeader_heading__tJvSy">{c.heading}</h2>
+          <p className="sectionHeader_subheading__51ZJh">{c.subheading}</p>
         </div>
       </div>
 
@@ -158,13 +154,13 @@ export default function SyncSection() {
               </button>
             ))}
           </div>
-          <p>and others</p>
+          <p>{c.andOthers}</p>
         </div>
 
         <div
           ref={demoRef}
           role="img"
-          aria-label="A code example showing a Worker syncing tickets from Zendesk into a Notion database titled Support Tickets."
+          aria-label={c.demoAriaLabel}
           className="syncDemo_container__X1CaI"
           data-layout="stacked"
           data-phase={phase}
@@ -175,10 +171,10 @@ export default function SyncSection() {
               <div id="connector-anchor-database-terminal" className="codeTerminalExample_container__GaMXg">
                 <div className="flex flex-row items-center justify-between flex-nowrap inline-full gap-12 codeTerminalExample_toolbar__4Qa1t">
                   <span className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV codeTerminalExample_title__eRQ3k">
-                    zendeskSync.ts
+                    {c.codeCard.filename}
                   </span>
                   <a
-                    href="https://github.com/makenotion/notion-cookbook/tree/main/examples/workers/syncs/zendesk"
+                    href={c.codeCard.exampleHref}
                     className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonSmall__LAKr_ button_button__bge_I codeTerminalExample_ctaButton__YqSt9 button_ghost__npAbk button_small__undru"
                   >
                     <span className="inline-flex flex-row items-center justify-start flex-nowrap inline-auto gap-4 codeTerminalExample_cta__L3sd5">
@@ -190,7 +186,7 @@ export default function SyncSection() {
                           d="M17.5091 6.68311C11.4214 6.68311 6.5 11.6407 6.5 17.774C6.5 22.6767 9.65328 26.8266 14.0277 28.2955C14.5746 28.4059 14.775 28.0568 14.775 27.7632C14.775 27.5061 14.7569 26.6247 14.7569 25.7064C11.6945 26.3676 11.0567 24.3843 11.0567 24.3843C10.5646 23.099 9.83536 22.7686 9.83536 22.7686C8.83302 22.0892 9.90837 22.0892 9.90837 22.0892C11.0202 22.1626 11.6037 23.2276 11.6037 23.2276C12.5877 24.9168 14.1735 24.4395 14.8115 24.1457C14.9025 23.4295 15.1943 22.9338 15.5042 22.6584C13.0617 22.4013 10.4918 21.4465 10.4918 17.1863C10.4918 15.9744 10.929 14.9829 11.6217 14.2117C11.5124 13.9363 11.1295 12.7977 11.7312 11.2736C11.7312 11.2736 12.6608 10.9798 14.7567 12.4121C15.6541 12.1693 16.5795 12.0458 17.5091 12.0448C18.4387 12.0448 19.3862 12.1735 20.2613 12.4121C22.3574 10.9798 23.287 11.2736 23.287 11.2736C23.8887 12.7977 23.5056 13.9363 23.3963 14.2117C24.1073 14.9829 24.5264 15.9744 24.5264 17.1863C24.5264 21.4465 21.9565 22.3828 19.4958 22.6584C19.8969 23.0072 20.243 23.6682 20.243 24.7149C20.243 26.2022 20.225 27.3959 20.225 27.763C20.225 28.0568 20.4255 28.4059 20.9722 28.2957C25.3467 26.8264 28.5 22.6767 28.5 17.774C28.518 11.6407 23.5786 6.68311 17.5091 6.68311Z"
                         />
                       </svg>
-                      See example
+                      {c.codeCard.exampleLabel}
                     </span>
                   </a>
                 </div>
@@ -215,7 +211,7 @@ export default function SyncSection() {
                 </div>
                 <pre className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalCode__nyDlV terminalRichText_terminalRichText__K1SQk codeTerminalExample_terminal__UQ5fq">
                   <code className="terminalRichText_code__rOL9k">
-                    Workers &gt; sync:ticketsSync{"\n"}
+                    {c.terminal.header}{"\n"}
                     <small
                       className="syncDemo_terminalLine__SFyTW"
                       data-phase={phase}

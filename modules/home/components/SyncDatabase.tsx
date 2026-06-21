@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import home from "@/modules/home/content/home.json";
 
 /*
  * The "Support Tickets" database in the sync demo (NDSDatabasePreviewContent).
@@ -7,6 +8,8 @@ import type { CSSProperties } from "react";
  * via tokens). `revealed` controls the staggered row fade-in (rowFadeIn ->
  * rowVisible); items are the 5 rows then the footer (index 5).
  */
+
+const content = home.syncDatabase;
 
 const LINE = "1px solid rgb(203, 203, 239)";
 
@@ -27,7 +30,7 @@ function Icon({ name, children }: { name: string; children: React.ReactNode }) {
 
 const COLUMNS = [
   {
-    label: "Tickets",
+    label: content.columns[0],
     flex: "0 0 46%",
     icon: (
       <Icon name="textFormat">
@@ -36,7 +39,7 @@ const COLUMNS = [
     )
   },
   {
-    label: "CSAT score",
+    label: content.columns[1],
     flex: "0 0 27%",
     icon: (
       <Icon name="arrowTriangleDownCircle">
@@ -46,7 +49,7 @@ const COLUMNS = [
     )
   },
   {
-    label: "Feature tags",
+    label: content.columns[2],
     flex: "0 0 27%",
     icon: (
       <Icon name="bulletedList">
@@ -61,32 +64,32 @@ type Row = { title: string; csat: Badge; tags: Badge[] };
 
 const ROWS: Row[] = [
   {
-    title: "Help setting up SSO",
-    csat: { label: "Very satisfied", bg: "rgb(255, 255, 255)" },
+    title: content.rows[0].title,
+    csat: { label: content.rows[0].csat, bg: "rgb(255, 255, 255)" },
     tags: [
-      { label: "Enterprise", bg: "rgba(203, 203, 239, 0.44)" },
-      { label: "Account access", bg: "rgb(203, 203, 239)" }
+      { label: content.rows[0].tags[0], bg: "rgba(203, 203, 239, 0.44)" },
+      { label: content.rows[0].tags[1], bg: "rgb(203, 203, 239)" }
     ]
   },
   {
-    title: "Invoice updated with correct details",
-    csat: { label: "Satisfied", bg: "rgba(203, 203, 239, 0.44)" },
-    tags: [{ label: "Billing & subscriptions", bg: "rgb(255, 255, 255)" }]
+    title: content.rows[1].title,
+    csat: { label: content.rows[1].csat, bg: "rgba(203, 203, 239, 0.44)" },
+    tags: [{ label: content.rows[1].tags[0], bg: "rgb(255, 255, 255)" }]
   },
   {
-    title: "Login fails after password reset",
-    csat: { label: "Dissatisfied", bg: "rgb(203, 203, 239)" },
-    tags: [{ label: "Account access", bg: "rgba(203, 203, 239, 0.44)" }]
+    title: content.rows[2].title,
+    csat: { label: content.rows[2].csat, bg: "rgb(203, 203, 239)" },
+    tags: [{ label: content.rows[2].tags[0], bg: "rgba(203, 203, 239, 0.44)" }]
   },
   {
-    title: "Import mapped correctly with help",
-    csat: { label: "Satisfied", bg: "rgba(203, 203, 239, 0.44)" },
-    tags: [{ label: "Imports & exports", bg: "rgb(203, 203, 239)" }]
+    title: content.rows[3].title,
+    csat: { label: content.rows[3].csat, bg: "rgba(203, 203, 239, 0.44)" },
+    tags: [{ label: content.rows[3].tags[0], bg: "rgb(203, 203, 239)" }]
   },
   {
-    title: "Request: Slack integration",
-    csat: { label: "Neutral", bg: "rgba(255, 255, 255, 0)", border: "1px solid rgb(203, 203, 239)" },
-    tags: [{ label: "Integrations", bg: "rgba(203, 203, 239, 0.44)" }]
+    title: content.rows[4].title,
+    csat: { label: content.rows[4].csat, bg: "rgba(255, 255, 255, 0)", border: "1px solid rgb(203, 203, 239)" },
+    tags: [{ label: content.rows[4].tags[0], bg: "rgba(203, 203, 239, 0.44)" }]
   }
 ];
 
@@ -124,7 +127,7 @@ export default function SyncDatabase({ revealed = ROWS.length + 1 }: { revealed?
           <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="32" className="NotionIconSvgWrapper_icon__8quiY">
             <path d="M7.5 11.406c0 .403.034.785.09 1.156a7.5 7.5 0 0 1-1.965.25 7.8 7.8 0 0 1-1.778-.196A5.6 5.6 0 0 1 .469 13.75L0 13.047l1.572-1.572C.562 10.581 0 9.275 0 7.656 0 4.475 2.153 2.5 5.625 2.5c2.69 0 4.584 1.19 5.3 3.203C8.772 6.706 7.5 8.731 7.5 11.406m12.5 0c0-3.181-2.153-5.156-5.625-5.156S8.75 8.225 8.75 11.406c0 3.182 2.153 5.156 5.625 5.156a7.8 7.8 0 0 0 1.778-.196 5.6 5.6 0 0 0 3.378 1.134l.469-.703-1.572-1.572c1.01-.894 1.572-2.2 1.572-3.819" fill="currentColor" />
           </svg>
-          <h3 className="NDSDatabasePreviewContent_title__2FbtX">Support Tickets</h3>
+          <h3 className="NDSDatabasePreviewContent_title__2FbtX">{content.title}</h3>
         </div>
         <div className="NDSDatabasePreviewContent_column__MGDZ5">
           <div className="NDSDatabasePreviewContent_row__X8Nb5" style={{ borderBlockEnd: LINE }}>
@@ -160,7 +163,7 @@ export default function SyncDatabase({ revealed = ROWS.length + 1 }: { revealed?
             <Icon name="plus">
               <path d="M10 3.59a.66.66 0 0 1 .66.66v5.09h5.09a.66.66 0 0 1 0 1.32h-5.09v5.09a.66.66 0 0 1-1.32 0v-5.09H4.25a.66.66 0 0 1 0-1.32h5.09V4.25a.66.66 0 0 1 .66-.66" />
             </Icon>
-            <span className="NDSDatabasePreviewContent_body__Q4V94">New page</span>
+            <span className="NDSDatabasePreviewContent_body__Q4V94">{content.footerLabel}</span>
           </div>
         </div>
       </div>

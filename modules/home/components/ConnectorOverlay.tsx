@@ -1,3 +1,5 @@
+import home from "@/modules/home/content/home.json";
+
 /**
  * Decorative connector graph overlaid on dev_connectorScope
  * (main > [1] > [1.1.5–33]): 13 vertices + 12 edges + 4 floating icons.
@@ -6,6 +8,7 @@
  * direct children of dev_connectorScope.
  */
 export default function ConnectorOverlay() {
+  const c = home.connector;
   return (
     <>
       <span className="dev_connectorVertex__v0DDZ" id="connector-vertex-1" />
@@ -34,10 +37,10 @@ export default function ConnectorOverlay() {
       <span className="dev_connectorEdge__hQmMl dev_connectorEdge11to12___C6HK" />
       <span className="dev_connectorEdge__hQmMl dev_connectorEdge12to13__s5ELC" />
       {/* eslint-disable @next/next/no-img-element */}
-      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon1__aRoIZ" style={{ color: "transparent" } as React.CSSProperties} src="/vendor/front-static/pages/dev/misc/tool.svg" />
-      <img alt="" loading="lazy" width="128" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon2__yYsoy" style={{ color: "transparent" } as React.CSSProperties} src="/vendor/front-static/pages/dev/misc/worker-runtime.svg" />
-      <img alt="" loading="lazy" width="80" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon3__gs2Eg" style={{ color: "transparent" } as React.CSSProperties} src="/vendor/front-static/pages/dev/misc/agent.svg" />
-      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon4__Lmsri" style={{ color: "transparent" } as React.CSSProperties} src="/vendor/front-static/pages/dev/misc/plug.svg" />
+      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon1__aRoIZ" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.tool} />
+      <img alt="" loading="lazy" width="128" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon2__yYsoy" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.workerRuntime} />
+      <img alt="" loading="lazy" width="80" height="80" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon3__gs2Eg" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.agent} />
+      <img alt="" loading="lazy" width="48" height="48" decoding="async" data-nimg="1" className="next-image dev_connectorIcon__Mi1mM dev_connectorIcon4__Lmsri" style={{ color: "transparent" } as React.CSSProperties} src={c.icons.plug} />
       {/* eslint-enable @next/next/no-img-element */}
     </>
   );

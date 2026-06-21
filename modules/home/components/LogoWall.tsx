@@ -1,16 +1,12 @@
 import type { CSSProperties } from "react";
+import home from "@/modules/home/content/home.json";
 
-const LOGO_BASE = "/vendor/front-static/logos/generic/en";
+const c = home.logoWall;
+
+const LOGO_BASE = c.logoBase;
 
 /** Logos in the "Trusted by engineers at" marquee (exact order + dimensions). */
-const LOGOS: { alt: string; file: string; w: number; h: number }[] = [
-  { alt: "OpenAI", file: "openai-blue.svg", w: 66, h: 24 },
-  { alt: "Figma", file: "figma-blue.svg", w: 47, h: 24 },
-  { alt: "Ramp", file: "ramp-blue.svg", w: 75, h: 24 },
-  { alt: "Match Group", file: "matchgroup-blue.svg", w: 74, h: 24 },
-  { alt: "Vercel", file: "vercel-blue.svg", w: 79, h: 24 },
-  { alt: "NVIDIA", file: "nvidia-blue.svg", w: 93, h: 24 }
-];
+const LOGOS: { alt: string; file: string; w: number; h: number }[] = c.logos;
 
 const MARQUEE_STYLE = {
   "--logo-wall-marquee-item-count-js": 6,
@@ -23,7 +19,7 @@ export default function LogoWall() {
   return (
     <div className="section_section__ppkch dev_logoWallSection__ISBHy">
       <p className="semanticTypography_semanticTypography__mWJkv semanticTypography_variantGlobalContext__VDlwW dev_logoWallEyebrow__JA6pv">
-        Trusted by engineers at
+        {c.eyebrow}
       </p>
       <div
         data-analytics-scroll-point="true"

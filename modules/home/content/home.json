@@ -1,0 +1,452 @@
+{
+  "hero": {
+    "heroBase": "/vendor/front-static/pages/dev",
+    "command": "curl -fsSL https://ntn.dev | bash",
+    "title": "/dev/notion",
+    "description": "Not just another CRUD API for your SaaS.",
+    "cliCallout": {
+      "text": "Start building on the Notion CLI or",
+      "docsLabel": "read our docs",
+      "docsHref": "#docs"
+    },
+    "images": {
+      "uiDesktop": "/hero/ui.webp",
+      "uiTablet": "/hero/ui-tablet.webp",
+      "uiMobile": "/hero/ui-mobile2.webp"
+    },
+    "devTools": {
+      "zendeskSync": {
+        "icon": "/misc/circuit.svg",
+        "title": "Workers > sync:Zendesk",
+        "messages": [
+          "Beginning sync...",
+          "Checking Zendesk...",
+          "Found 5 new tickets...",
+          "Syncing 5 tickets...",
+          "Done. Synced 5 tickets."
+        ]
+      },
+      "dataScoutQuery": {
+        "icon": "/misc/circuit.svg",
+        "title": "Data Scout > tool:Query",
+        "messages": [
+          "Received tool call...",
+          "Constructing query...",
+          "Querying warehouse...",
+          "Found 47 rows in 142 ms...",
+          "Done. Returned 47 rows."
+        ]
+      },
+      "claudeCode": {
+        "icon": "/misc/claude.svg",
+        "title": "Claude Code",
+        "messages": [
+          "Received user request...",
+          "Analyzing codebase...",
+          "Implementing ask...",
+          "Running tests...",
+          "Done. PR #8527 open."
+        ]
+      }
+    },
+    "keynote": {
+      "href": "#keynote",
+      "ariaLabel": "Watch the keynote",
+      "thumbnail": "/keynote-ticker/NotionDeveloperPlatform-Keynote.jpg",
+      "thumbnailAlt": "Watch the keynote",
+      "caption": "See the Developer Platform in action.",
+      "linkLabel": "Watch the keynote"
+    }
+  },
+  "logoWall": {
+    "eyebrow": "Trusted by engineers at",
+    "logoBase": "/vendor/front-static/logos/generic/en",
+    "logos": [
+      {
+        "alt": "OpenAI",
+        "file": "openai-blue.svg",
+        "w": 66,
+        "h": 24
+      },
+      {
+        "alt": "Figma",
+        "file": "figma-blue.svg",
+        "w": 47,
+        "h": 24
+      },
+      {
+        "alt": "Ramp",
+        "file": "ramp-blue.svg",
+        "w": 75,
+        "h": 24
+      },
+      {
+        "alt": "Match Group",
+        "file": "matchgroup-blue.svg",
+        "w": 74,
+        "h": 24
+      },
+      {
+        "alt": "Vercel",
+        "file": "vercel-blue.svg",
+        "w": 79,
+        "h": 24
+      },
+      {
+        "alt": "NVIDIA",
+        "file": "nvidia-blue.svg",
+        "w": 93,
+        "h": 24
+      }
+    ]
+  },
+  "sync": {
+    "heading": "Sync any data source into Notion.",
+    "subheading": "Continuously upsert external records into a Notion Database with Workers, a declarative schema, and a persistent cursor.",
+    "andOthers": "and others",
+    "demoAriaLabel": "A code example showing a Worker syncing tickets from Zendesk into a Notion database titled Support Tickets.",
+    "tabsBase": "/vendor/front-static/pages/dev/tabs",
+    "sourceTabs": [
+      {
+        "label": "Zendesk",
+        "icon": "icon_zendesk.svg"
+      },
+      {
+        "label": "Salesforce",
+        "icon": "icon_cloud.svg"
+      },
+      {
+        "label": "Linear",
+        "icon": "icon_linear-2.svg"
+      }
+    ],
+    "codeCard": {
+      "filename": "zendeskSync.ts",
+      "exampleHref": "https://github.com/makenotion/notion-cookbook/tree/main/examples/workers/syncs/zendesk",
+      "exampleLabel": "See example"
+    },
+    "terminal": {
+      "header": "Workers > sync:ticketsSync",
+      "connecting": "Connecting. Found 5 new tickets...",
+      "syncing": "Syncing 5 tickets...",
+      "done": "Done. Synced 5 tickets in 764 ms."
+    }
+  },
+  "syncDatabase": {
+    "title": "Support Tickets",
+    "columns": [
+      "Tickets",
+      "CSAT score",
+      "Feature tags"
+    ],
+    "rows": [
+      {
+        "title": "Help setting up SSO",
+        "csat": "Very satisfied",
+        "tags": [
+          "Enterprise",
+          "Account access"
+        ]
+      },
+      {
+        "title": "Invoice updated with correct details",
+        "csat": "Satisfied",
+        "tags": [
+          "Billing & subscriptions"
+        ]
+      },
+      {
+        "title": "Login fails after password reset",
+        "csat": "Dissatisfied",
+        "tags": [
+          "Account access"
+        ]
+      },
+      {
+        "title": "Import mapped correctly with help",
+        "csat": "Satisfied",
+        "tags": [
+          "Imports & exports"
+        ]
+      },
+      {
+        "title": "Request: Slack integration",
+        "csat": "Neutral",
+        "tags": [
+          "Integrations"
+        ]
+      }
+    ],
+    "footerLabel": "New page"
+  },
+  "tools": {
+    "heading": "Build any tool for your agents.",
+    "subheading": "Write custom tools for Notion Agents that generate assets, query live data, and hit any API.",
+    "slides": {
+      "presentation": {
+        "tabTitle": "Generate assets from your docs",
+        "ariaLabel": "A chat showing a Custom Agent generating a presentation from a Notion doc with a code snippet of the presentation tool.",
+        "filename": "presentationTool.ts",
+        "cta": {
+          "href": "https://github.com/makenotion/notion-cookbook/tree/main/examples/workers/tools/ppt-creator",
+          "label": "See example"
+        },
+        "codeHtml": "<code class=\"language-typescript\">worker.tool(&quot;createPresentation&quot;, {\r\n\ttitle: &quot;Create Presentation&quot;,\r\n\tdescription:\r\n\t\t&quot;Reads a Notion page and creates a PowerPoint presentation from its content. Each heading becomes a new slide. The generated .pptx file is uploaded to the bottom of the page.&quot;,\r\n\tschema: j.object({\r\n\t\tpageId: j.string()\r\n\t}),\r\n\texecute: async ({ pageId }, { notion }) =&gt; {\r\n\t\t// Fetch page content as markdown and parse into slides\r\n\t\tconst pageTitle = await getPageTitle(notion, pageId);\r\n\t\tconst markdown = await getPageMarkdown(pageId);\r\n\t\tconst slides = groupMarkdownIntoSlides(markdown, pageTitle);\r\n\r\n\t\t// Build the .pptx file\r\n\t\tconst filename = `${pageTitle}.pptx`;\r\n\t\tconst buffer = await buildPresentation(pageTitle, slides);\r\n\r\n\t\t// Upload to Notion and append to the page\r\n\t\tawait uploadToNotion(notion, pageId, filename, buffer);\r\n\r\n\t\treturn `Created presentation &quot;${pageTitle}&quot; with ${slides.length + 1} slides (1 title + ${slides.length} content) and added it to the page.`;\r\n\t},\r\n});</code>",
+        "terminalHtml": "<code class=\"terminalRichText_code__rOL9k\">Workers &gt; tool:createPresentation\r\n<small class=\"toolDemo_terminalLine__PpS8W\" data-visible=\"false\"> </small></code>"
+      },
+      "dataWarehouse": {
+        "tabTitle": "Query any data warehouse",
+        "ariaLabel": "A chat showing a Custom Agent querying a data warehouse in Notion with a code snippet of the data warehouse query tool.",
+        "filename": "queryRevenueTool.ts",
+        "cta": {
+          "href": "https://github.com/makenotion/notion-cookbook/tree/main/examples/workers/tools/snowflake-query",
+          "label": "See example"
+        },
+        "codeHtml": "<code class=\"language-typescript\">worker.tool(&quot;queryRevenue&quot;, {\r\n\ttitle: &quot;Query Revenue&quot;,\r\n\tdescription: &quot;Run a SQL query against the deals warehouse table.&quot;,\r\n\tschema: j.object({\r\n\t\tquery: j\r\n\t\t\t.string()\r\n\t\t\t.describe(&quot;e.g. SELECT SUM(amount) AS revenue WHERE region = &#x27;North America&#x27;&quot;),\r\n\t}),\r\n\texecute: async ({ query }) =&gt;\r\n\t\tsnowflake.query(query.replace(/(\\s+WHERE|$)/i, &quot; FROM deals$1&quot;)),\r\n\t});</code>",
+        "terminalHtml": "<code class=\"terminalRichText_code__rOL9k\">Workers &gt; tool:queryRevenue\r\n<small class=\"toolDemo_terminalLine__PpS8W\" data-visible=\"false\"> </small></code>"
+      },
+      "browser": {
+        "tabTitle": "Take actions in any app",
+        "ariaLabel": "A chat showing a Custom Agent browsing the web in Notion and placing an order, with the LLM prompt used to create the browser tool.",
+        "filename": "browserTools.md",
+        "cta": {
+          "href": "#",
+          "label": "Copy the prompt"
+        },
+        "codeHtml": "<code class=\"language-markdown\">&lt;!--\r\nCopy and paste this into your coding agent of choice.\r\n--&gt;\r\nBuild a worker that lets my Notion agent order food from DoorDash using Browserbase.\r\n\r\nI want three tools:\r\n\r\n- listFavorites — Returns my saved meals (e.g. &quot;friday night thai&quot; = Pad See Ew + Green Curry from Siam Garden).\r\n- orderFavorite — Takes a meal name, shows me what it&#x27;s about to order and the estimated total, and asks for confirmation before placing it.\r\n- checkOrder — Returns delivery ETA and driver status.</code>"
+      }
+    }
+  },
+  "toolChat": {
+    "pitchLinkLabel": "Pitch deck",
+    "userPromptBefore": "Can you turn ",
+    "userPromptAfter": " into a Powerpoint?",
+    "thinkingLabel": "Thinking",
+    "thoughtLabel": "Thought",
+    "stepLoadedPage": "Loaded page ",
+    "stepCalledTool": "Called tool ",
+    "stepToolName": "Create Presentation",
+    "stepFinalized": "Finalized Powerpoint",
+    "replyText": "All set. Here’s the new Powerpoint for your next pitch. Break a leg!",
+    "cardCreatedLabel": "Created ",
+    "cardFileName": "PitchDeck.pptx",
+    "cardBadgeLabel": "Download"
+  },
+  "webhooks": {
+    "heading": "Trigger Notion workflows from anywhere.",
+    "subheading": "Listen for incoming webhooks from any app, then run workflows with Notion Agents, pages, databases, and external APIs.",
+    "ctaLabel": "Read the docs",
+    "ctaHref": "https://developers.notion.com/workers/guides/webhooks",
+    "ariaLabel": "An animation showing external platform webhooks triggering Workers to perform actions in Notion or externally.",
+    "slotBase": "/vendor/front-static/pages/dev/slot",
+    "eventRepeat": 10,
+    "actionRepeat": 5,
+    "activeIndex": 25,
+    "events": [
+      {
+        "icon": "github.svg",
+        "label": "PR merged"
+      },
+      {
+        "icon": "stripe.svg",
+        "label": "Customer canceled"
+      },
+      {
+        "icon": "greenhouse.svg",
+        "label": "Candidate signed offer"
+      },
+      {
+        "icon": "docusign.svg",
+        "label": "Contract signed"
+      },
+      {
+        "icon": "zendesk.svg",
+        "label": "Issue escalated"
+      }
+    ],
+    "actions": [
+      {
+        "icon": "launchdarkly.svg",
+        "label": "Start experiment"
+      },
+      {
+        "icon": "jira.svg",
+        "label": "Create incident"
+      },
+      {
+        "icon": "slack.svg",
+        "label": "Send kudos to team"
+      },
+      {
+        "icon": "notion.svg",
+        "label": "Create onboarding page"
+      },
+      {
+        "icon": "slack.svg",
+        "label": "Notify the CS team"
+      },
+      {
+        "icon": "notion.svg",
+        "label": "Update task status"
+      },
+      {
+        "icon": "pagerduty.svg",
+        "label": "Page on-call"
+      },
+      {
+        "icon": "salesforce.svg",
+        "label": "Update opportunity"
+      },
+      {
+        "icon": "gmail.svg",
+        "label": "Send welcome email"
+      },
+      {
+        "icon": "notion.svg",
+        "label": "Update customer record"
+      }
+    ]
+  },
+  "slotMachine": {
+    "hooks": [
+      "shipPR",
+      "cancelAccount",
+      "signOffer",
+      "signContract",
+      "issueEsc"
+    ],
+    "slotSound": "/vendor/front-static/pages/dev/slot/slot.mp3"
+  },
+  "workers": {
+    "heading": "All of this, on a hosted runtime.",
+    "subheading": "Workers are isolated sandboxes managed by Notion, so the code behind your syncs, tools, and workflows runs on our infra instead of your servers.",
+    "cta": {
+      "label": "Read the docs",
+      "href": "https://developers.notion.com/workers/get-started/overview",
+      "arrow": "→"
+    },
+    "terminal": {
+      "ariaLabel": "A terminal window showing a worker being deployed to a Notion-hosted runtime.",
+      "html": "<code class=\"terminalRichText_code__rOL9k\"><small>$</small> ntn deploy worker\r\n<small>[build]</small> Deploying...\r\n<small>[build]</small> Uploading to Notion...\r\n<small>[build]</small> Worker updated...\r\n\r\nCapabilities:\r\n  <small>tool  queryCustomers</small>\r\n  <small>tool  moreOfficeSnacks</small>\r\n  <small>sync  linearTickets</small>\r\n\r\n\r\n</code>"
+    },
+    "images": {
+      "terminalIcon": "/vendor/front-static/pages/dev/misc/notionCircuit.svg"
+    }
+  },
+  "ticker": {
+    "message": "Syncs, agent tools, and webhook triggers are available in beta."
+  },
+  "connector": {
+    "icons": {
+      "tool": "/vendor/front-static/pages/dev/misc/tool.svg",
+      "workerRuntime": "/vendor/front-static/pages/dev/misc/worker-runtime.svg",
+      "agent": "/vendor/front-static/pages/dev/misc/agent.svg",
+      "plug": "/vendor/front-static/pages/dev/misc/plug.svg"
+    }
+  },
+  "toolDemo": {
+    "terminalMessages": [
+      "Received tool call...",
+      "Generating presentation...",
+      "Done. Created deck."
+    ]
+  },
+  "externalAgents": {
+    "eyebrow": "Alpha",
+    "heading": "Bring your favorite agents into Notion.",
+    "subheading": "Use external agents like Claude, Cursor, Decagon, or one you’ve built, in a shared interface for your team and agents.",
+    "cta": {
+      "label": "Join the waitlist",
+      "arrow": "→",
+      "href": "https://notion.pages.dev.notion.co/351b35e6e67f80128a8cf585188cf668?pvs=105"
+    },
+    "tabIcons": [
+      "/vendor/front-static/pages/dev/tabs/icon_codex.svg",
+      "/vendor/front-static/pages/dev/tabs/icon_cursor-2.svg",
+      "/vendor/front-static/pages/dev/tabs/icon_decagon.svg",
+      "/vendor/front-static/pages/dev/tabs/icon-claude-2.svg",
+      "/vendor/front-static/pages/dev/tabs/icon_amplitude-2.svg"
+    ],
+    "cards": [
+      {
+        "title": "Mention",
+        "body": "Collaborate with agents like teammates. @mention them in any page, comment, or chat with them directly.",
+        "image": {
+          "alt": "A chat within Notion showing a user interacting with external agents to kick off a coding task.",
+          "src": "/vendor/front-static/pages/dev/byo/mention-agents.webp"
+        }
+      },
+      {
+        "title": "Assign",
+        "body": "Hand off work to your agents from any task, or trigger them in parallel.",
+        "image": {
+          "alt": "Notion database with a list of tasks, and one task being assigned to an external coding agent.",
+          "src": "/vendor/front-static/pages/dev/byo/assign-to-agents.webp"
+        }
+      },
+      {
+        "title": "Orchestrate",
+        "body": "Watch agents think, call tools, and act across Notion and other apps with your review and approval when it matters.",
+        "image": {
+          "alt": "A chat with an external agent in Notion, showing its thought process, reading documents, and calling tools.",
+          "src": "/vendor/front-static/pages/dev/byo/generate.webp"
+        }
+      },
+      {
+        "title": "BYO Agent",
+        "body": "Bring your in‑house agents into Notion with the External Agents API. Notion gives them triggers, tools, and permissions so they show up as first‑class collaborators on all the same surfaces.",
+        "terminal": {
+          "ariaLabel": "A list of API endpoints that a third-party agent can call to have it behave like a Custom Agent in Notion.",
+          "html": "<code class=\"terminalRichText_code__rOL9k\"><small>POST</small> /sessions/{id}\r\n<small>POST</small> /sessions/{id}/messages\r\n<small>GET</small>  /sessions/{id}/events\r\n\r\n\r\n\r\n</code>"
+        }
+      }
+    ]
+  },
+  "platform": {
+    "heading": "CLI, API, MCP, SDK — LFG.",
+    "cli": {
+      "title": "Notion CLI",
+      "badge": "Beta",
+      "body": "Let coding agents use token‑efficient commands to build and deploy syncs and tools to our Workers runtime.",
+      "command": "curl -fsSL https://ntn.dev | bash",
+      "ctaHref": "https://developers.notion.com/cli/get-started/overview",
+      "ctaLabel": "Read the docs"
+    },
+    "api": {
+      "title": "Notion API",
+      "body": "Turn docs into Markdown and build internal tools with PATs or shared connections.",
+      "ctaHref": "https://developers.notion.com/reference/intro",
+      "ctaLabel": "Read the API docs"
+    },
+    "mcp": {
+      "title": "Notion MCP",
+      "body": "Search, read, and edit pages and databases with up to 91% fewer tokens.",
+      "command": "claude mcp add --transport http notion https://mcp.notion.com/mcp",
+      "agentSelectorLabel": "Claude",
+      "agentOptions": [
+        "Claude",
+        "Codex",
+        "Other"
+      ],
+      "ctaHref": "https://developers.notion.com/guides/mcp/mcp",
+      "ctaLabel": "Read the docs"
+    },
+    "sdk": {
+      "title": "Notion Agent SDK",
+      "badge": "Alpha",
+      "body": "Bring your Agents into any app. Trigger runs via API, keep multi-turn threads, and stream responses in real time.",
+      "ctaHref": "https://notion.pages.dev.notion.co/357b35e6e67f8012bb0dd3f95c9be810?pvs=105",
+      "ctaLabel": "Join the waitlist",
+      "codeAriaLabel": "A code snippet showing how to use the Agent SDK to create a new agent.",
+      "codeHtml": "<code class=\"language-typescript\">import { NotionAgentsClient } from &quot;@notionhq/agents-client&quot;;\r\n\r\nconst client = new NotionAgentsClient();\r\nconst agent = await client.agents.agent(id);\r\n\r\nawait agent.chat({ \r\n  message: &quot;Hello, World!&quot; \r\n});</code>"
+    }
+  },
+  "endcap": {
+    "heading": "Any data. Any tool. Any agent. All in Notion.",
+    "diagramAlt": "Diagram of Notion’s developer platform connecting external agents, data sources, and triggers to Notion context and custom agents through CLI, MCP, API, SDK, and workers.",
+    "images": {
+      "diagramDesktop": "/vendor/front-static/pages/dev/diagram/diagram.svg",
+      "diagramMobile": "/vendor/front-static/pages/dev/diagram/mobile.svg"
+    }
+  }
+}

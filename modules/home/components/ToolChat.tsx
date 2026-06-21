@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import home from "@/modules/home/content/home.json";
+
+const c = home.toolChat;
 
 /*
  * The agent tool-chat in the tools demo (NDSChatPreviewContent). Uses the
@@ -47,7 +50,7 @@ function PitchLink() {
         </svg>
       </span>
       <span className="NDSChatPreviewContent_bodyMedium__FzMFh NDSChatPreviewContent_linkText__Qanls" style={{ textDecorationColor: TINT }}>
-        Pitch deck
+        {c.pitchLinkLabel}
       </span>
     </span>
   );
@@ -120,9 +123,9 @@ export default function ToolChat() {
           <div className="NDSChatPreviewContent_fadeClip__DqvDw">
             <div className="NDSChatPreviewContent_userRow__yZ_CV">
               <div className="NDSChatPreviewContent_userBubble__6i9am" style={{ backgroundColor: "rgb(246, 246, 252)", color: INK }}>
-                <span className="NDSChatPreviewContent_bodyRegular__P_pec">Can you turn </span>
+                <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.userPromptBefore}</span>
                 <PitchLink />
-                <span className="NDSChatPreviewContent_bodyRegular__P_pec"> into a Powerpoint?</span>
+                <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.userPromptAfter}</span>
               </div>
             </div>
           </div>
@@ -136,7 +139,7 @@ export default function ToolChat() {
               <div className="NDSChatPreviewContent_thoughtContainer__P_fKu" style={{ color: "rgba(19, 19, 186, 0.66)" }}>
                 <div className="NDSChatPreviewContent_thoughtHeaderRow__l61W8">
                   <span className={`NDSChatPreviewContent_bodyRegular__P_pec${thinking ? " nds-shimmer-text" : ""}`}>
-                    {thinking ? "Thinking" : "Thought"}
+                    {thinking ? c.thinkingLabel : c.thoughtLabel}
                   </span>
                   <span className="NDSChatPreviewContent_thoughtHeaderChevron__HTytG">
                     <svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 20 20" className="arrowChevronSingleDown" style={{ width: "14px", height: "14px", display: "block", fill: "currentcolor", flexShrink: 0 }}>
@@ -149,7 +152,7 @@ export default function ToolChat() {
                     <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_thoughtStep__bxJMo">
                       <Rail topHidden />
                       <div>
-                        <span className="NDSChatPreviewContent_bodyRegular__P_pec">Loaded page </span>
+                        <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.stepLoadedPage}</span>
                         <PitchLink />
                       </div>
                     </div>
@@ -161,8 +164,8 @@ export default function ToolChat() {
                     <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_thoughtStep__bxJMo">
                       <Rail />
                       <div>
-                        <span className="NDSChatPreviewContent_bodyRegular__P_pec">Called tool </span>
-                        <span className="NDSChatPreviewContent_bodyMedium__FzMFh" style={{ color: INK }}>Create Presentation</span>
+                        <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.stepCalledTool}</span>
+                        <span className="NDSChatPreviewContent_bodyMedium__FzMFh" style={{ color: INK }}>{c.stepToolName}</span>
                       </div>
                     </div>
                   </div>
@@ -173,7 +176,7 @@ export default function ToolChat() {
                     <div className="NDSChatPreviewContent_fadeClip__DqvDw NDSChatPreviewContent_thoughtStep__bxJMo">
                       <Rail bottomHidden />
                       <div>
-                        <span className="NDSChatPreviewContent_bodyRegular__P_pec">Finalized Powerpoint</span>
+                        <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.stepFinalized}</span>
                       </div>
                     </div>
                   </div>
@@ -191,7 +194,7 @@ export default function ToolChat() {
               <div className="NDSChatPreviewContent_responseColumn__kQR_E">
                 <div className={`NDSChatPreviewContent_responseStepRow__wu_g0 ${fadeUp(8)}`}>
                   <div className="NDSChatPreviewContent_fadeClip__DqvDw">
-                    <span className="NDSChatPreviewContent_bodyRegular__P_pec">All set. Here’s the new Powerpoint for your next pitch. Break a leg!</span>
+                    <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.replyText}</span>
                   </div>
                 </div>
                 <div className={`NDSChatPreviewContent_responseStepRow__wu_g0 ${fadeUp(9)}`}>
@@ -199,10 +202,10 @@ export default function ToolChat() {
                     <div className="NDSChatPreviewContent_cardOuter__peZB_" style={{ borderColor: "rgba(203, 203, 239, 0.44)", backgroundColor: "rgb(255, 255, 255)" }}>
                       <div className="NDSChatPreviewContent_cardColumn__o9tMu">
                         <div>
-                          <span className="NDSChatPreviewContent_bodyRegular__P_pec">Created </span>
-                          <span className="NDSChatPreviewContent_bodyMedium__FzMFh" style={{ color: INK }}>PitchDeck.pptx</span>
+                          <span className="NDSChatPreviewContent_bodyRegular__P_pec">{c.cardCreatedLabel}</span>
+                          <span className="NDSChatPreviewContent_bodyMedium__FzMFh" style={{ color: INK }}>{c.cardFileName}</span>
                         </div>
-                        <span className="NDSChatPreviewContent_cardBadge__khCZB" style={{ backgroundColor: "rgba(203, 203, 239, 0.44)", color: INK }}>Download</span>
+                        <span className="NDSChatPreviewContent_cardBadge__khCZB" style={{ backgroundColor: "rgba(203, 203, 239, 0.44)", color: INK }}>{c.cardBadgeLabel}</span>
                       </div>
                       <div className="NDSChatPreviewContent_cardIconSlot__MAOG3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">

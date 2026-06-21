@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 
+import home from "@/modules/home/content/home.json";
+
 /*
  * Drives the webhooks slot machine (reels rendered statically in
  * WebhooksSection): the event reel cycles forward through the 5 triggers, the
@@ -16,8 +18,10 @@ import { useEffect } from "react";
  * triggers an immediate spin and resets the auto-cycle timer.
  */
 
+const c = home.slotMachine;
+
 // Event reel order (5) -> webhook name shown in the center label.
-const HOOKS = ["shipPR", "cancelAccount", "signOffer", "signContract", "issueEsc"];
+const HOOKS = c.hooks;
 const N_EVENTS = 5;
 const N_ACTIONS = 10;
 const CELL = 96;
@@ -29,7 +33,7 @@ const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 const ACTIVE = "slotMachine_cellActive__20Hi5";
 const LEVER = "icons_lever__2zQae";
 const PULLING = "icons_leverPulling__LtvVs";
-const SLOT_SOUND = "/vendor/front-static/pages/dev/slot/slot.mp3";
+const SLOT_SOUND = c.slotSound;
 const INITIAL_PULL_MS = 300; // original pulls the lever ~300ms after the section enters view
 
 export default function SlotMachine() {
