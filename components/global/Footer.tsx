@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import FooterGame from "@/components/global/FooterGame";
+import CommandCopy from "@/components/global/CommandCopy";
 
 /** Footer (minimal variant). The agent-run game inside dev_footerGameSection is rendered by FooterGame. */
 export default function Footer() {
@@ -174,21 +175,7 @@ export default function Footer() {
         <div className="footer-minimal-dynamic-content">
           <div className="flex flex-col items-start md:items-center justify-start flex-nowrap inline-full gap-16">
             <div className="flex flex-row items-center justify-start flex-nowrap inline-auto max-inline-full gap-0">
-              <div className="pt-8 pb-8 ps-16 pe-48 surface surfaceAccent surface-surface-accent command-cta-command-container">
-                <div className="command-cta-command-mask">
-                  <input type="text" readOnly aria-label="Install command" spellCheck="false" autoComplete="off" className="command-cta-command" value="curl -fsSL https://ntn.dev | bash" />
-                </div>
-                <button title="Copy to clipboard" type="button" aria-label="Copy to clipboard" className="icon-button-icon-button icon-button-background-size-fill command-cta-copy-button" data-analytics-name="dev_platform_cli_copy_button" data-analytics-context="endcap">
-                  <span aria-hidden="true" className="icon-button-icon">
-                    <span className="graphic-graphic command-cta-clipboard-icon" style={{ "--graphic-icon-size": "var(--dimension-spacing-20)" } as CSSProperties}>
-                      <svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 20 20" style={{ width: "100%", height: "100%", display: "block", fill: "inherit", flexShrink: "0" } as CSSProperties} className="clipboard">
-                        <path d="M11.5 1.5c.768 0 1.41.534 1.58 1.25h.67c1.174 0 2.125.951 2.125 2.125v10.5A2.125 2.125 0 0 1 13.75 17.5h-7.5a2.125 2.125 0 0 1-2.125-2.125v-10.5c0-1.174.951-2.125 2.125-2.125h.67c.17-.716.812-1.25 1.58-1.25zM6.25 4a.875.875 0 0 0-.875.875v10.5c0 .483.392.875.875.875h7.5a.875.875 0 0 0 .875-.875v-10.5A.875.875 0 0 0 13.75 4h-.67a1.626 1.626 0 0 1-1.58 1.25h-3c-.768 0-1.41-.534-1.58-1.25zM8.5 2.75a.375.375 0 0 0-.375.375v.5c0 .207.168.375.375.375h3a.375.375 0 0 0 .375-.375v-.5a.375.375 0 0 0-.375-.375z" />
-                      </svg>
-                    </span>
-                  </span>
-                  <span aria-hidden="true" className="icon-button-focus-ring" />
-                </button>
-              </div>
+              <CommandCopy command="curl -fsSL https://ntn.dev | bash" analyticsName="dev_platform_cli_copy_button" analyticsContext="endcap" />
             </div>
             <span className="semantic-typography-semantic-typography semantic-typography-variant-global-context dev-cli-callout-text-responsive">
               Start building on the Notion CLI or{" "}

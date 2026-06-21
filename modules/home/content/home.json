@@ -421,12 +421,10 @@
     "mcp": {
       "title": "Notion MCP",
       "body": "Search, read, and edit pages and databases with up to 91% fewer tokens.",
-      "command": "claude mcp add --transport http notion https://mcp.notion.com/mcp",
-      "agentSelectorLabel": "Claude",
-      "agentOptions": [
-        "Claude",
-        "Codex",
-        "Other"
+      "agents": [
+        { "label": "Claude", "command": "claude mcp add --transport http notion https://mcp.notion.com/mcp" },
+        { "label": "Codex", "command": "codex mcp add --transport http notion https://mcp.notion.com/mcp" },
+        { "label": "Other", "command": "https://mcp.notion.com/mcp" }
       ],
       "ctaHref": "https://developers.notion.com/guides/mcp/mcp",
       "ctaLabel": "Read the docs"
